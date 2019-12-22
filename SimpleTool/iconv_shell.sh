@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 #echo "$#" != "2"
 
 if [ "$#" != "2" ];then
