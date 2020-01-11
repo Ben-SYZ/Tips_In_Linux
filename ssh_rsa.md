@@ -1,16 +1,23 @@
 # ssh login with rsa
 
 ## 文件信息
-rsa 密钥位置：`~/.ssh`
-ssh 配置文件：`/etc/ssh/ssh_config`
+rsa 密钥位置：`~/.ssh/`
+ssh 配置文件：`/etc/ssh/sshd_config`
 
 ## 操作
+1. sshd_config 的配置
+	```sh
+	PubkeyAuthentication yes
+	RSAAuthentication yes
+	AuthorizedKeysFile	.ssh/authorized_keys #.ssh/authorized_keys2
+	PasswordAuthentication yes
+	```
 
-1. **client** 生成密钥对：rsa 和 rsa.pub
+2. **client** 生成密钥对：rsa 和 rsa.pub
 
 `ssh-keygen -t rsa`
 
-2. 将rsa.pub附加到**server** ~/.ssh/authorized_keys的文件内。 [link](https://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+3. 将rsa.pub附加到**server** ~/.ssh/authorized_keys的文件内。 [link](https://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
 
 	Following 2 codes are excuted on client
 	1. `ssh-copy-id [-i ~/.ssh/rsa.pub] user@host`
@@ -21,7 +28,7 @@ ssh 配置文件：`/etc/ssh/ssh_config`
 	# Now try logging into the machine, with:   "ssh 'usr@host'" and check to make sure that only the key(s) you wanted were added.
 	```
 
-3. **client** 可以直接连接**server**
+4. **client** 可以直接连接**server**
 
 ### [Termux](http://blog.lujun9972.win/blog/2018/01/24/%E4%BD%BF%E7%94%A8termux%E6%8A%8Aandroid%E6%89%8B%E6%9C%BA%E5%8F%98%E6%88%90ssh%E6%9C%8D%E5%8A%A1%E5%99%A8/)
 
