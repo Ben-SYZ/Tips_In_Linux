@@ -1,2 +1,6 @@
 # set the default editor to bash 
-export EDITOR=/usr/bin/nvim >> ~/.bashrc
+Add the following statement to `~/.bashrc`
+
+```sh
+export EDITOR=/usr/bin/nvim
+```
