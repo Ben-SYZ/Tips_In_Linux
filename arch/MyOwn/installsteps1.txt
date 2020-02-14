@@ -1,0 +1,48 @@
+# Net DHCP
+
+1. dhcpcd.service
+
+# time
+
+1. set timezone
+
+```sh
+timedatectl set-timezone /Asia/Shanghai
+```
+
+2. sychcronize time by net
+
+```sh
+timedatectl set-ntp true
+```
+
+3. check status
+
+```sh
+timedatectl status
+```
+
+# partition the disk
+
+```sh
+fdisk -l
+```
+
+# select the mirrors
+```sh
+/etc/pacman.d/mirrorlist
+```
+
+# install essential package
+
+```sh
+pacstrap /mnt base linux linux-firmware
+```
+
+#configure the system
+
+1. fstab
+```sh
+genfstab -U /mnt >>/mnt/etc/fstab
+"initially empty
+```

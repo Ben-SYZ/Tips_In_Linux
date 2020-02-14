@@ -1,0 +1,35 @@
+change root into the new system
+arch-chroot /mnt
+set the timezone
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+
+set hardware time to UTC
+```sh
+hwclock
+```
+
+# localization
+1. language
+uncomment in `/etc/locale.gen`, you can add more one language.
+2.apply
+```sh
+locale-gen
+```
+set Language variable in `/etc/locale.conf`
+```sh
+LANG=en_US.UTF-8
+```
+
+# Network configuration
+1. hostname
+/etc/hostname
+myhostname
+
+2. matching entries
+/etc/hosts
+127.0.0.1	localhost
+::1 		localhost
+127.0.1.1	Ben_Arch.localdomain	Ben_Arch
+
+3. network tool
+eg. iputils
