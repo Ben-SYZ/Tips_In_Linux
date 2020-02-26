@@ -10,6 +10,6 @@
 
 ## how to manage this repository
 
-Add the new tips in `master`,
+Add the new tips in `master`,checkout to `arch` branch and merge from `master`.
 
-checkout to `arch` branch and merge from `master`.
+Remove the unused tips in `arch`.
