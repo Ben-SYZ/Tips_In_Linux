@@ -34,6 +34,7 @@ setxkbmap us -variant colemak
 setxkbmap us -variant workman
 setxkbmap us -variant norman
 setxkbmap us
+setxkbmap -layout us colemak
 
 # permanet
 # write the above to graphic config file
