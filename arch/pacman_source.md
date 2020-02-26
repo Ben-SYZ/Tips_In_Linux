@@ -1,4 +1,7 @@
 # 得到一台高效利器
+av57993155
+
+`cowsay`
 ```
 sudo nano /etc/pacman.conf
 
