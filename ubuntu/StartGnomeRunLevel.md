@@ -1,9 +1,0 @@
-# gnome start from tty
-
-```sh
-sudo service gdm start
-run level 0：关机
-run level 3：命令行模式
-run level 5：图形界面模式
-run level 6：关机
-```
