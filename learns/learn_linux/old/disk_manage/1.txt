@@ -1,0 +1,46 @@
+所以也避开了很少一部分但又十分重要的关于硬件的内容，我们只能期待用户能够抱着提高自学能力的心态自己去补充相关的知识。
+
+
+ /dev/sda2	对应着主机硬盘的分区，数字表示分区号，数字前面的字母 a 表示第几块硬盘（也可能是可移动磁盘），你如果主机上有多块硬盘则可能还会出现 /dev/sdb，/dev/sdc 这些磁盘设备都会在 /dev 目录下以文件的存在形式。
+
+df 		查看磁盘的容量 report file system disk space usage
+		-h
+du 			查看目录容量 estimate file space usage
+		-h 	human read
+		-d N 	max depth 文件深度 所占磁盘块个数
+			打印比option低N,N-1, ... , 0级的文件深度
+		-s	当前目录的深度同 N=0
+		-a	当其目录下所有文件的深度
+
+dd 		copy可以读取一切linux意义上的文件
+dd也可以用在备份硬件的引导扇区、获取一定数量的随机数据或者空数据等任务中。dd程序也可以在复制时处理数据，例如转换字节序、或在 ASCII 与 EBCDIC 编码间互换。
+
+		if=..	 	input file 输入文件
+		of=..		output file输出文件
+		bs=..		block size 块大小 (default: B)
+		count=..	指定块的数量
+		conv=CONVS 	convert the file
+		-----------------------------------------
+		CONVS
+		ascii  from EBCDIC to ASCII
+	
+		ebcdic from ASCII to EBCDIC
+
+		ibm    from ASCII to alternate EBCDIC
+	
+		lcase  change upper case to lower case
+	
+		ucase  change lower case to upper case
+		------------------------------------------
+
+		标准输入（读入终端的输入）到标准输出或者一个文件中：
+-----------------------------------------------------------------------------
+	# 输出到文件
+	$ dd of=test bs=10 count=1 # 或者 dd if=/dev/stdin of=test bs=10 count=1
+	# 输出到标准输出
+	$ dd if=/dev/stdin of=/dev/stdout bs=10 count=1
+	# 注：在打完了这个命令后，继续在终端打字，作为你的输入
+------------------------------------------------------------------------------
+		文件系统	
+	用户不必关心数据在实际保存在硬盘哪个位置，通过文件和树形目录来管理文件,实际上文件系统也可能仅仅是一种存取資料的界面而已，实际的数据是通过网络协议（如NFS、SMB、9P等）提供的或者内存上，甚至可能根本沒有对应的文件（如proc文件系统）。
+ls -l /lib/modules/$(uname -r)/kernel/fs	查看Linux 支持哪些文件系统

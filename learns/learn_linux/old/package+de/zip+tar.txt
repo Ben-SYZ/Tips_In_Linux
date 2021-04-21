@@ -1,0 +1,72 @@
+*.zip 		zip 程序打包压缩的文件
+*.rar 		rar 程序压缩的文件
+*.7z 		7zip 程序压缩的文件
+*.tar 		tar 程序打包，未压缩的文件
+*.gz 		gzip 程序（GNU zip）压缩的文件
+*.xz 		xz 程序压缩的文件
+*.bz2 		bzip2 程序压缩的文件
+*.tar.gz 	tar 打包，gzip 程序压缩的文件
+*.tar.xz 	tar 打包，xz 程序压缩的文件
+*tar.bz2 	tar 打包，bzip2 程序压缩的文件
+*.tar.7z 	tar 打包，7z 程序压缩的文件
+
+zip	打包文件夹
+		-r	recursion
+		-q	quit
+		-o	output 
+		-1	compress faster
+		-9	compress better
+		-x	exclude
+		-e	encrypt password
+		-l	lf->cr+lf
+du	disk usage
+		-h	human read
+		-d	max depth 所占磁盘块个数
+unzip
+		-q	quiet
+		-d	unzip to this directory AFTER the file name
+		-O GBK	指定编码类型为GBK
+
+	eg. unzip -q linux.zip -d ziptest
+
+	使用 unzip 解压文件时我们同样应该注意中文编码的兼容问题通常 Windows 系统上面创建的压缩文件，如果有有包含中文的文档或以中文作为文件名的文件时默认会采用 GBK 或其它编码，Linux 上面默认使用的是 UTF-8 编码，如果不加任何处理，直接解压的话可能会出现中文乱码的问题（有时候它会自动帮你处理），为了解决这个问题，我们可以在解压时指定编码类型。
+
+为什么要区分打包和压缩
+其实这源于Linux中的很多压缩程序只能针对一个文件进行压缩
+
+tar 	
+	 tar -c [-f ARCHIVE] [OPTIONS] [FILE...]
+		-c	creat .tar
+		-r	append 		向压缩归档文件末尾追加文件
+		-u	update 		更新原压缩包中的文件
+		-x	extract		解压
+		-t	只查看包内内容不解包
+		-d, 	diff Find differences between archive and file system. 
+
+		-f	file=ARCHIVE 后需立即更上文件名
+		-P	保留绝对路径
+		-v	显示压缩过程 
+		-C	解包一个文件(-x 参数)到指定路径的!已存在!目录(-C 参数)
+			eg.  tar -xf shiyanlou.tar -C tardir
+?????????????????????????????????????????????????????????
+保留文件属性和跟随链接（符号链接或软链接），有时候我们使用 tar 备份文件当你在其他主机还原时希望保留文件的属性（-p 参数）和备份链接指向的源文件而不是链接本身（-h 参数）
+?????????????????????????????????????????????????????????
+
+打包加压缩
+	压缩文件格式 	参数
+	*.tar.gz 	-z
+	*.tar.xz 	-J
+	*tar.bz2 	-j
+eg. $ tar -czf shiyanlou.tar.gz /home/shiyanlou/Desktop
+----------------------------------------------------------------------
+常用命令：
+
+    zip：
+        打包 ：zip something.zip something （目录请加 -r 参数）
+        解包：unzip something.zip
+        指定路径：-d 参数
+    tar：
+        打包：tar -cf something.tar something
+        解包：tar -xf something.tar
+        指定路径：-C 参数
+----------------------------------------------------------------------

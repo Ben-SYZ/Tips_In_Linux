@@ -1,0 +1,10 @@
+touch 			make a new file
+gcc -o 1-1 1-1.c	compile 1-1.c to the excuted file 1-1(.o)
+./			excute the excuted file
+
+			StackOverflow for help
+
+	有壳就有核，这里的核就是指 UNIX/Linux 内核，Shell 是指“提供给使用者使用界面”的软件（命令解析器），类似于 DOS 下的 command（命令行）和后来的 cmd.exe 。普通意义上的 Shell 就是可以接受用户输入命令的程序。它之所以被称作 Shell 是因为它隐藏了操作系统底层的细节。
+	在 UNIX/Linux 中比较流行的常见的 Shell 有 bash、zsh、ksh、csh 等等，Ubuntu 终端默认使用的是 bash，默认的桌面环境是 GNOME 或者 Unity（基于 GNOME）。
+
+pwd			查看当前所在目录
