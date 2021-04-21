@@ -1,0 +1,2 @@
+picom.conf
+fading = true

@@ -16,6 +16,13 @@
 
 https://wiki.archlinux.org/index.php/Bluetooth_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
+---
+power on
+scan on
+pair E4:...
+
+---
+
 ----
 Linux 系统接收通过蓝牙传输的文件
 本文来自依云's Blog，转载请注明。

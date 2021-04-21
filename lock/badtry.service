@@ -1,0 +1,29 @@
+[Unit]
+Description=i3lock
+After=default.target
+# https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6
+StartLimitIntervalSec=0
+# StartLimitIntervalSec 0永远重启，n>0代表尝试n秒后放弃.
+
+Before=sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+# https://unix.stackexchange.com/questions/85244/setting-display-in-systemd-service-file
+#ExecStartPre=/bin/sleep 20
+Environment=XAUTHORITY=/home/%I/.Xauthority
+Environment=DISPLAY=:0
+
+ExecStartPre=/usr/bin/xset s 5 -b
+ExecStart=/usr/bin/xautolock -time 5 -locker "/usr/bin/i3lock -i /home/%I/Pictures/LockScreen.png -n" -detectsleep -bell 0
+#ExecStart=/usr/bin/xautolock -time 5 -locker "/usr/bin/i3lock-fancy -n " -detectsleep -bell 0
+ExecStopPost=/usr/bin/xset s 295
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
+WantedBy=sleep.target

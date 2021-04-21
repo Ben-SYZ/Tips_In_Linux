@@ -1,0 +1,1 @@
+pacman -Ql package

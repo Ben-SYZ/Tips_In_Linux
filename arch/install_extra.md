@@ -59,4 +59,11 @@ pacman -S neovim vi zsh wps_supplicant dhcpcd
 ```
 
 
+---
 
+gpt, bios
+1. 1M partition (type: BIOS boot)
+2. install grub intel-ucode (os-prober)
+3. grub-install --target=i386-pc /dev/sda
+4. grub-mkconfig -o /boot/grub/grub.cfg
+5. grub-mkfont -s 10 -o /boot/grub/SauceCodePro.pf2 ./Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf

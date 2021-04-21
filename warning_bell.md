@@ -1,0 +1,4 @@
+```
+# /etc/inputrc
+set bell-style none
+```

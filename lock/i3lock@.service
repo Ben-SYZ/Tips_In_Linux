@@ -1,0 +1,15 @@
+[Unit]
+Description=i3lock
+Before=sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset s 5 -b
+#ExecStart=/usr/bin/i3lock -i /home/%I/Pictures/LockScreen.png
+ExecStart=/usr/bin/i3lock-fancy
+ExecStopPost=/usr/bin/xset s 295
+
+[Install]
+WantedBy=sleep.target

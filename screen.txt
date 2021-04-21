@@ -1,0 +1,8 @@
+1. 首先在安装配置环境前创建一个screen会话
+	screen -s lnmp
+2. 保存会话窗口
+	ctrl+a d
+3. list
+	screen -ls
+4. reattach
+	screen -r name
