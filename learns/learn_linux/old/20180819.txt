@@ -1,0 +1,38 @@
+touch 			make a new file
+gcc -o 1-1 1-1.c	compile 1-1.c to the excuted file 1-1(.o)
+./			excute the excuted file
+
+			StackOverflow for help
+
+	有壳就有核，这里的核就是指 UNIX/Linux 内核，Shell 是指“提供给使用者使用界面”的软件（命令解析器），类似于 DOS 下的 command（命令行）和后来的 cmd.exe 。普通意义上的 Shell 就是可以接受用户输入命令的程序。它之所以被称作 Shell 是因为它隐藏了操作系统底层的细节。
+	在 UNIX/Linux 中比较流行的常见的 Shell 有 bash、zsh、ksh、csh 等等，Ubuntu 终端默认使用的是 bash，默认的桌面环境是 GNOME 或者 Unity（基于 GNOME）。
+
+pwd			查看当前所在目录
+sysvbanner 		one form of a written
+toilet figlet		form of written
+su			login account root
+sudo 			login pc by user's password and run the cmd like root
+sudo passwd root	set the orignal password for root
+sudo adduser tina	add user
+
+adduser 和 useradd 的区别是什么？
+	useradd 只创建用户，创建完了用 passwd lilei 去设置新用户的密码。
+	adduser 会创建用户，创建目录，创建密码（提示你设置），做这一系列的操作。
+	其实 useradd、userdel 这类操作更像是一种命令，执行完了就返回。而 adduser 更像是一种程序，需要你输入、确定等一系列操作。
+
+su -l(-)() tina		change the account to tina
+			su username ,切换后的环境变量大部分还是切换前用户的环境
+			su - username ,切换后则完全切换到了目标用户的环境
+ctrl+d	or exit		exit the current account or terminal
+
+group ben 		其中冒号之前表示用户，后面表示该用户所属的用户组。每次新建用户如果不指定用户组的话，默认会自动创建一个与用户名相同的用户组
+
+cat /etc/group | sort			sort 字典排序
+cat /etc/group | grep -E "ben"		find ben
+
+
+sudo usermod -G sudo tina	tina get the authority of sudo
+sudo gpasswd -a tina sudo	add tina to sudo group
+sudo gpasswd -d tina sudo	delete tina from sudo
+
+sudo deluser tina --remove-home	del tina's account and its home directory

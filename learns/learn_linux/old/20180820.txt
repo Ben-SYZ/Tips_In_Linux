@@ -1,0 +1,17 @@
+	链接文件是分为两种的，软链接文件,另一种当然是“硬链接”（硬链接不常用，具体内容不作为本课程讨论重点，而软链接等同于 Windows 上的快捷方式）。
+	 Linux 里面一切皆文件，正因为这一点才有了设备文件（ /dev 目录下有各种设备文件，大都跟具体的硬件设备相关）
+ls -A			显示隐藏文件 except . && ..
+ls -a			显示隐藏文件 Linux 下以 . 开头的文件为隐藏文件
+ls -d			list the directory
+ls -h			print human readable size, used with l or s
+ls -l 			print the info in a bit long form
+ls -s			print the size of files in blocks
+ls -S			order files by their size
+ll			ls -la
+sudo chown ben iphone6	change the own to ben
+
+the own printed by ll needn't belong to the group
+
+chmod ugo +rw a.txt	user group others，+- add or cancel the athority
+chmod 760 a.txt		user rwx, group rw-, others ---
+

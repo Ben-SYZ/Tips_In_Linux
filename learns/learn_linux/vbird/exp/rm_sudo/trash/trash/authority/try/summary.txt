@@ -1,0 +1,11 @@
+./	rwx 
+	cp	r
+	rm	r	need to confirm
+		w	ok
+		x	need to confirm
+	vim	rw	only in this way: can we write in
+for a directory
+
+read:	what is in this directory
+write:	rename, new or del the files under this directory
+excute:	Go into the directory
