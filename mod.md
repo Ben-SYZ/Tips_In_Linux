@@ -1,0 +1,3 @@
+lsmod
+modinfo
+modprobe

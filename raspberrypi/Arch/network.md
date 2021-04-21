@@ -1,0 +1,3 @@
+netctl /etc/netctl/pppoe ...
+
+/etc/systemd/network/00-wireless-dhcp.network

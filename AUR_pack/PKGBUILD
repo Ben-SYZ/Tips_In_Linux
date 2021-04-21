@@ -1,0 +1,62 @@
+# Maintainer: Ben <bensongsyz@gmail.com>
+pkgname='wudao-dict'
+pkgver=2.1
+pkgrel=1
+pkgdesc='The command line version of Youdao Dictionary, supporting English-Chinese mutual search and online search.'
+arch=('any')
+url="https://github.com/ChestnutHeng/Wudao-dict"
+license=('unknown')
+depends=('python' 'python-bs4' 'python-lxml')
+makedepends=('git')
+source=('wudao-dict::git://github.com/ChestnutHeng/Wudao-dict.git')
+md5sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+#pkgver() {
+#	cd "$srcdir/$pkgname"
+## The examples below are not absolute and need to be adapted to each repo. The
+## primary goal is to generate version numbers that will increase according to
+## pacman's version comparisons with later commits to the repo. The format
+## VERSION='VER_NUM.rREV_NUM.HASH', or a relevant subset in case VER_NUM or HASH
+## are not available, is recommended.
+#
+## Git, no tags available
+#	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+#}
+#
+
+package() {
+	cd "$srcdir"
+	#echo $source
+	#echo $srcdir $./src/
+	#echo ${pkgdir} #./pkg
+			#./pkg > pkg.tar.zst
+
+	mkdir -p "${pkgdir}/usr/share"
+	cp -r "./wudao-dict/wudao-dict" "${pkgdir}/usr/share/"
+
+	## 用户词
+	#if [ ! -d usr ]
+	#then
+	#    mkdir usr
+	#fi
+	mkdir -p "${pkgdir}/usr/share/wudao-dict/usr"
+	chmod -R 666 "${pkgdir}/usr/share/wudao-dict/usr"
+
+	mkdir -p "${pkgdir}/usr/bin"
+
+	cd "${pkgdir}/usr/bin"
+	# 添加系统命令wd
+	echo '#!/bin/bash'>./wd
+	echo 'save_path=$PWD'>>./wd
+	echo 'cd '/usr/share/wudao-dict >>./wd
+	echo './wdd $*'>>./wd
+	echo 'cd $save_path'>>./wd
+	sudo chmod +x ./wd
+
+	mkdir -p "${pkgdir}/etc/bash_completion.d"
+	# 添加bash_completion自动补全
+	ln -s /usr/share/wudao-dict/wd_com "${pkgdir}/etc/bash_completion.d/wd"
+}

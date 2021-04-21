@@ -266,6 +266,10 @@ gaps inner 15
 pacman -S fcitx fcitx-im fcitx-configtool (all)
 ```
 
+```sh
+pacman -S fcitx-rime fcitx-configtool
+```
+
 #### config
 
 ```sh
@@ -288,7 +292,7 @@ reboot
 ```
 
 ### chromium
-### edit vedio
+### edit video
 kdenlive
 ### edit photo
 gimp
@@ -299,7 +303,7 @@ thunderbird
 ### office
 libreoffice
 
-### vedio
+### video
 vlc
 
 ### virtual box

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head itemprop="Article" itemscope itemtype="http://schema.org/Article">
+    <meta charset="UTF-8">
+    <meta data-n-head="true" name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="theme-color" content="#de698c">
+    <meta http="Cache-Control" content="no-transform">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="applicable-device" content="pc">
+    <link rel="apple-touch-icon-precomposed" href="//static.hdslb.com/mobile/img/512.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="//www.bilibili.com/favicon.ico">
+    <link rel="apple-touch-icon" href="//www.bilibili.com/favicon.ico">
+    <meta name="name" content="Linux通用键位修改（中）-实际操作">
+    <meta itemprop="title" name="title" content="Linux通用键位修改（中）-实际操作">
+    <meta itemprop="description" name="description" content="一些常见的解决方案（极不推荐，有缺陷，可跳过）（具体产生原因的推测会在下篇详述）Emacs需要用高频使用Ctrl键，Vim需要高频使用Esc键。这两个按键在ANSI机械布局的键盘上一个在左上角，一个在左下角，都是极其反人类的位置。IBM&amp;#47;Windows键盘（美式布局）QWERTY布局，System key为Win键，在Linux下常称为“Super”键或“Mod4”键为了拯救小拇指，常用的解决方案有：Emacs用户：软件：交换LeftCtrl和leftAlt，或交换LeftCtrl和CapsLo">
+    <meta itemprop="keywords" name="keywords" content="BUS,EMACS,NUM,VMWARE,linux,ESC,SVN,软件包,VIM,BVN,BVR,蓝牙键盘,虚拟化,KEYBOARD,SUPER,macOS,ROOT,USB,无线键盘,改数据,MAPPING,HHKB,重命名,数据库,虚拟机,自定义,元圈七,MACBOOK,Dvorak,应用软件,笔记本,二进制,WIN,笔记本电脑,机械键盘,写程序,可以了,NAME,解决方案,操作系统,反人类,是我的,不需要,WIN10,WORD,奇奇怪怪,这是我的,解决办法,左下角,快捷键,Linux,Emacs,Vim,">
+    <meta itemprop="author" name="author" content="JimMoen">
+    <meta itemprop="url" content="https://www.bilibili.com/read/cv5156572/">
+    <meta itemprop="image" content="https://i0.hdslb.com/bfs/article/1e59cb33cfa24a8b3f91b7cc405a024e6e2a40d0.jpg">
+    <meta itemprop="uploadDate" content="2020-3-17 22:19:46">
+    <meta itemprop="datePublished" content="2020-3-17 22:19:46">
+    <meta data-n-head="true" data-hid="og:type" property="og:type" content="article">
+    <meta data-n-head="true" data-hid="og:title" property="og:title" content="Linux通用键位修改（中）-实际操作">
+    <meta data-n-head="true" data-hid="og:image" property="og:image" content="https://i0.hdslb.com/bfs/article/1e59cb33cfa24a8b3f91b7cc405a024e6e2a40d0.jpg">
+    <meta data-n-head="true" data-hid="og:url" property="og:url" content="http://www.bilibili.com/read/cv5156572/">
+    <meta name="renderer" content="webkit">
+    <meta name="spm_prefix" content="333.341">
+    <link data-n-head="true" rel="icon" type="image/x-icon" href="//www.bilibili.com/favicon.ico">
+    <link data-n-head="true" rel="apple-touch-icon-precomposed" type="image/x-icon" href="http://static.hdslb.com/mobile/img/512.png">
+    <link rel="Canonical" href="https://www.bilibili.com/read/cv5156572/">
+    <title>Linux通用键位修改（中）-实际操作 - 哔哩哔哩</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Article",
+        "@id": "https://www.bilibili.com/read/cv5156572/",
+        "appid": "1580859622074471",
+        "title": "Linux通用键位修改（中）-实际操作",
+        "images": "https://i0.hdslb.com/bfs/article/1e59cb33cfa24a8b3f91b7cc405a024e6e2a40d0.jpg",
+        "thumbnailUrl":"https://i0.hdslb.com/bfs/article/1e59cb33cfa24a8b3f91b7cc405a024e6e2a40d0.jpg",
+        "description": "一些常见的解决方案（极不推荐，有缺陷，可跳过）（具体产生原因的推测会在下篇详述）Emacs需要用高频使用Ctrl键，Vim需要高频使用Esc键。这两个按键在ANSI机械布局的键盘上一个在左上角，一个在左下角，都是极其反人类的位置。IBM&amp;#47;Windows键盘（美式布局）QWERTY布局，System key为Win键，在Linux下常称为“Super”键或“Mod4”键为了拯救小拇指，常用的解决方案有：Emacs用户：软件：交换LeftCtrl和leftAlt，或交换LeftCtrl和CapsLo",
+        "pubDate": "2020-3-17 22:19:46"
+      }
+    </script>
+    <script>
+      window.original = {
+        cvid: "5156572",
+        author: {
+          name: "JimMoen",
+          mid: "404025095"
+        },
+        banner_url: "https://i0.hdslb.com/bfs/article/1e59cb33cfa24a8b3f91b7cc405a024e6e2a40d0.jpg",
+        reprint: "1",
+        summary: "一些常见的解决方案（极不推荐，有缺陷，可跳过）（具体产生原因的推测会在下篇详述）Emacs需要用高频使用Ctrl键，Vim需要高频使用Esc键。这两个按键在ANSI机械布局的键盘上一个在左上角，一个在左下角，都是极其反人类的位置。IBM&amp;#47;Windows键盘（美式布局）QWERTY布局，System key为Win键，在Linux下常称为“Super”键或“Mod4”键为了拯救小拇指，常用的解决方案有：Emacs用户：软件：交换LeftCtrl和leftAlt，或交换LeftCtrl和CapsLo",
+        media: "",
+        actId: "0",
+        dispute: {
+          dispute: "",
+          dispute_url: ""
+        },
+        spoiler: "0"
+      }
+    </script>
+<link href="//s1.hdslb.com/bfs/static/jinkela/article/pcDetail.3d54106910911b51bbab7b0efce88160c117d2ef.css" rel="stylesheet"/></head>
+<body>
+<div id="biliMainHeader" class="report-wrap-module" style="height: 56px;"></div>
+<div class="page-container">
+    <div class="nav-tab-bar">
+      
+        <a href="//www.bilibili.com/read/home?from=articleDetail" target="_self" class="logo">
+        </a>
+        <a href="//www.bilibili.com/read/home?from=articleDetail" target="_self" class="tab-item" data-tab-id="0">
+          <span>推荐</span>
+        </a>
+        
+          
+          <a href="//www.bilibili.com/read/douga?from=articleDetail" target="_self" class="tab-item " data-tab-id="2">
+            <span>动画</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/game?from=articleDetail" target="_self" class="tab-item " data-tab-id="1">
+            <span>游戏</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/cinephile?from=articleDetail" target="_self" class="tab-item " data-tab-id="28">
+            <span>影视</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/life?from=articleDetail" target="_self" class="tab-item " data-tab-id="3">
+            <span>生活</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/interest?from=articleDetail" target="_self" class="tab-item " data-tab-id="29">
+            <span>兴趣</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/lightnovel?from=articleDetail" target="_self" class="tab-item " data-tab-id="16">
+            <span>轻小说</span>
+          </a>
+          
+        
+          
+          <a href="//www.bilibili.com/read/technology?from=articleDetail" target="_self" class="tab-item  on" data-tab-id="17">
+            <span>科技</span>
+          </a>
+          
+        
+
+      
+    </div>
+    <div class="up-info-holder">
+      <div class="fixed-box">
+        <div class="up-info-block">
+          <a class="up-face-holder " href="//space.bilibili.com/404025095" target="_blank">
+            <img class="up-face-image" data-face-src="//i2.hdslb.com/bfs/face/6722eed6f78c6961e96f674b132cefbb5e0cd154.jpg" src="//static.hdslb.com/images/member/noface.gif">
+            
+            
+            
+            
+
+          </a>
+          <div class="up-info-right-block">
+            <div class="row">
+              <a class="up-name" href="//space.bilibili.com/404025095" target="_blank">JimMoen</a>
+              <span class="level"></span>
+              <div class="nameplate-holder">
+                <i class="nameplate"></i>
+              </div>
+            </div>
+            <div class="row-2">
+              粉丝:
+              <span class="fans-num"></span>
+              <span class="view">阅读:</span>
+              <span class="view-num"></span>
+            </div>
+          </div>
+        </div>
+        <div class="follow-btn-holder  ">
+          <span class="follow-btn">关注</span>
+        </div>
+        <div class="up-article-list-block report-wrap-module hidden" id="readRecommendInfo">
+          <div class="block-title">
+            推荐文章
+          </div>
+          <ul class="article-list">
+          </ul>
+        </div>
+        <div class="more">
+          <div class="top-bar">
+            <label>更多</label>
+          </div>
+          <a class="ac-link" href="//www.bilibili.com/read/apply/" target="_blank">
+            <div class="link">
+              <span class="icon">
+              </span>
+              <p class="title">成为创作者</p>
+              <p class="info">申请成为专栏UP主</p>
+            </div>
+          </a>
+          <a href="//www.bilibili.com/blackboard/help.html#专栏相关" target="_blank">
+            <div class="help">
+              <span class="icon">
+              </span>
+              <p class="title">专栏帮助</p>
+              <p class="info">查看专栏使用说明</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="right-side-bar">
+      <div class="to-comment">
+        <div class="comment-num-holder">
+          <span class="comment-num"></span>
+        </div>
+      </div>
+      <div class="to-top"></div>
+    </div>
+    <div class="head-container">
+        
+        <div class="banner-img-holder"></div>
+        
+        
+            <div class="bangumi-rating-container"></div>
+        
+        <div class="argue-flag hidden"></div>
+        <div class="title-container">
+            <h1 class="title">Linux通用键位修改（中）-实际操作</h1>
+            <div class="info">
+                <a class="category-link" href="//www.bilibili.com/read/technology#rid=26" target="_blank"><span>数码</span></a>
+                <span class="create-time" data-ts="1584476789"></span>
+                <div class="article-data"></div>
+            </div>
+        </div>
+
+        
+        <div style="display:none" class="author-container">
+            <a class="author-face" href="//space.bilibili.com/404025095" target="_blank">
+                <img data-face-src="//i2.hdslb.com/bfs/face/6722eed6f78c6961e96f674b132cefbb5e0cd154.jpg" src="//i2.hdslb.com/bfs/face/6722eed6f78c6961e96f674b132cefbb5e0cd154.jpg" class="author-face-img">
+                
+                
+                
+            </a>
+            <a class="author-name" href="//space.bilibili.com/404025095" target="_blank">JimMoen</a>
+          <div class="attention-btn slim-border">关注</div>
+        </div>
+    </div>
+
+    <div class="article-holder"><h1 style="text-align: center;"><span class="color-pink-04">一些常见的解决方案（极不推荐，有缺陷，可跳过）</span></h1><h1 style="text-align: center;"><span class="color-pink-04">（具体产生原因的推测会在下篇详述）</span></h1><p><span class="color-pink-04"></span><br/></p><p>Emacs需要用高频使用Ctrl键，Vim需要高频使用Esc键。这两个按键在ANSI机械布局的键盘上一个在左上角，一个在左下角，都是极其反人类的位置。<br/></p><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/367343666ae9a1c9809ac9087268489dc8421ca3.png" width="1920" height="925" data-size="111723"/><figcaption class="caption" contenteditable="">IBM/Windows键盘（美式布局）<br/>QWERTY布局，System key为Win键，在Linux下常称为“Super”键或“Mod4”键<br/></figcaption></figure><p>为了拯救小拇指，常用的解决方案有：<br/></p><ol class=" list-paddingleft-2"><li><p><span class="font-size-16">Emacs用户：</span></p><p><span class="font-size-16">软件：交换<span class="color-blue-02 font-size-12">LeftCtrl</span>和<span class="color-blue-02 font-size-12">leftAlt</span>，或交换<span class="color-blue-02 font-size-12">LeftCtrl</span>和<span class="color-blue-02 font-size-12">CapsLock</span></span>，包括Evil-mode在内的各种插件</p><p>硬件：脚踏板，HHKB或其他的可编程键盘，用手掌按（机械键盘还行，笔记本键盘就拉倒吧），以及一些其他的奇妙方法……</p></li><li><p><span class="font-size-16">Vim用户：</span></p><p><span class="font-size-16">软件：交换<span class="color-blue-02 font-size-12">Esc</span>和<span class="color-blue-02 font-size-12">CapsLock</span></span>，自己映射一堆快捷键</p></li></ol><p>在<span class="color-pink-04">macOS</span>上使用Emacs和Vim的用户可以使用macOS自带的修改方法，或者买日版Macbook或键盘。</p><p>在<span class="color-pink-04">Linux<span class="color-default">上</span></span>除了插件和硬件方法之外的就是修改键盘映射了，常见且常用的操作方法有：</p><ol class=" list-paddingleft-2"><li><p>X11：使用<span class="color-blue-02 font-size-12">xmodmap</span>修改（最常见）</p></li><li><p>X11：使用<span class="color-blue-02 font-size-12">setxkbmap</span>或者<span class="color-blue-02 font-size-12">localectl</span>提供的各种<span class="color-blue-02 font-size-12">option</span>来修改。（上一章内容）</p></li><li><p>TTY：修改<span class="color-gray-02 font-size-12">/usr/share/kbd/keymaps/i386/qwerty/us.map.gz</span>文件中<span class="color-gray-02 font-size-12">keycode</span>的定义。<span class="color-default font-size-16">（上一章内容）</span></p></li></ol><p>这三种方法都有自己的局限性，因为它们都工作在<strong><span class="color-purple-04">应用软件层</span></strong>。</p><ol class=" list-paddingleft-2"><li><p><span class="color-pink-03">首先他们都不能在X11和TTY下通用。<span class="color-default">（我们说过X11和TTY的有各自的转译软件）</span></span></p></li><li><p><span class="color-pink-03">X11提供的这两种方法，都有这样那样的缺陷。</span>包括个别选项不起作用<span class="color-gray-03 font-size-12">注¹</span>，Esc和CapsLock交换之后大写锁定灯会错乱<span class="color-gray-03 font-size-12">注²<span class="color-default font-size-16">，并且它们</span></span>对于<strong>带图形界面</strong>的VirtualBox或者KVM虚拟机来说有一个<span class="color-pink-03">致命缺陷</span>（VMware未测试）<span class="color-gray-03 font-size-12">注³</span>。</p></li></ol><p><span class="color-gray-03"><strong>注¹</strong>：交换<span class="color-gray-03 font-size-12">LeftCtrl</span>和<span class="color-gray-03 font-size-12">LeftAlt</span>不起作用（这里不知道是不是我的姿势有问题）。</span></p><p><span class="color-gray-03"><strong>注²</strong>：按照正常逻辑，交换这两个键之后按下Esc键会切换大写锁定，但是按这两个键大写锁定灯都会亮。<br/></span></p><p><span class="color-gray-03"><strong>注³</strong>：主机使用这些方法之一<strong>交换<span class="color-gray-03 font-size-12">Esc</span>和<span class="color-gray-03 font-size-12">CapsLock</span></strong>。虚拟机内捕获键盘后，按下<span class="color-gray-03 font-size-12">Esc</span>会<strong>同时产生这两个键的作用</strong>。比如Win10重命名一个文件，要修改大写锁定，按了一个键会<strong>既修改大写锁定，也退出重命名的输入框。</strong><span class="color-pink-03 font-size-12">Vbox和KVM实测都会这样，VMware未测试。</span></span></p><p><span class="color-gray-03">个人<strong>推测</strong>是虚拟机软件要运行在X11环境下，但是也要和内核交互，所以会同时接收内核和X11传来的按键事件，所以一个键触发了两个操作。</span><span class="color-gray-03 font-size-12">说推测是因为我没看过这些虚拟化软件的源码，但根据具体行为来看，这个推测为真的可能性接近99%，在后面会默认这个猜测为真。</span></p><p><br/></p><h1 style="text-align: center;"><br/></h1><h1 style="text-align: center;"><span class="color-pink-04">我们使用一个方便通用，还不会有BUG的方法</span></h1><h1 style="text-align: center;"><span class="color-pink-04">直接修改scancode -&gt; keycode映射表</span></h1><p>回顾一下，上一章中介绍了Linux中一个按键从按下到得到最终效果需要三次处理：</p><p>KEYBOARD   --&gt;   scancode   --&gt;   keycode   --&gt;   keysymbol</p><p>           ①键盘电路       ②内核处理       ③软件设置</p><p>①键盘硬件把你的按键行为转换成计算机能识别的  scancode</p><p>②系统内核把scancode转换成TTY或X11需要使用的  keycode</p><p>③TTY或X11的设置把keycode转换成具体的按键目的 keysymbol</p><p>厂商制造的键盘，要根据标准设置好每个物理位置的按键发出的scancode。操作系统根据最常见和最通用的功能布局：QWERTY，把scancode和keycode对应起来。<span class="color-gray-03 font-size-12">（而且由于极其常见且通用，所以<strong>US-QWERTY</strong>也是通常情况的默认功能布局）</span></p><p>我们要达到自己的需求，交换<span class="color-blue-02 font-size-12">LeftCtrl</span>和<span class="color-blue-02 font-size-12">leftAlt</span>、或交换<span class="color-blue-02 font-size-12">LeftCtrl</span>和<span class="color-blue-02 font-size-12">CapsLock<span class="color-default font-size-16">、或<span class="font-size-16">交换<span class="color-blue-02 font-size-12">Esc</span>和<span class="color-blue-02 font-size-12">CapsLock</span></span>等功能，其实只需要把内置的<span class="color-gray-03 font-size-12">scancode-&gt;keycode mapping<span class="color-default font-size-16">修改成我们需要的样子</span></span>就可以了。</span></span></p><p><span class="font-size-20"><strong><span class="color-default">并且因为这个修改对内核以上的软件透明，所以不会对上层应用的按键处理逻辑产生任何的额外影响。也就不会产生那些奇奇怪怪的问题，这正是我们所需要的。</span></strong></span></p><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/367343666ae9a1c9809ac9087268489dc8421ca3.png" width="1920" height="925" data-size="111723"/><figcaption class="caption" contenteditable="">IBM/Windows键盘（美式布局）<br/>QWERTY布局，System key为Win键，在Linux下常称为“Super”键或“Mod4”键<br/></figcaption></figure><p><br/></p><p>修改原理简述：默认的<span class="color-gray-03 font-size-12">scancode-&gt;keycode mapping<span class="color-default font-size-16">由hwdb维护，hwdb除此之外还包括并维护了其他各类硬件的信息。详见<span class="color-gray-03 font-size-12">/usr/lib/udev/hwdb.d/</span>目录及man Page  <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/community/man-pages-zh_cn/hwdb.7.zh_CN"><span class="color-default font-size-12">hwdb(7)-ZH</span></a><span class="color-default font-size-12">  </span><a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/hwdb.7.en"><span class="color-default font-size-12">hwdb(7)-EN</span></a></span></span></p><ul class=" list-paddingleft-2"><li><p>所需工具：</p></li></ul><p><span class="font-size-20"><strong><span class="color-default">evtest</span></strong></span><span class="color-gray-03 font-size-12">（查看某个按键的具体scancode）</span></p><p><span class="font-size-20"><strong><span class="color-default">udevadm</span></strong></span><span class="color-gray-03 font-size-12">（更新自定义配置，查看配置内容，集成在systemd中，但是部分不使用systemd的发行版也会有udevadm的包提供，详见各发行版wiki）</span></p><p><span class="font-size-16"><strong>任何文本编辑器</strong></span><span class="color-gray-03 font-size-12">（编辑你的自定义配置……）</span></p><ul class=" list-paddingleft-2"><li><p>所需权限：</p></li></ul><p><span class="font-size-20"><strong>root</strong></span><strong><span class="font-size-12"></span></strong><span class="color-gray-03 font-size-12">（建议全程在root环境操作，<strong>不要使用sudo</strong>，可能会一些奇妙的问题）</span></p><p><strong><span class="font-size-20"><br/></span></strong></p><p><strong><span class="font-size-20"></span></strong></p><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/02db465212d3c374a43c60fa2625cc1caeaab796.png" class="cut-off-6"/></figure><p style="text-align: center;"><span class="font-size-23"><strong>1.</strong></span><strong><span class="font-size-20">首先获得你需要特定键盘上的某个键的<span class="color-gray-03">scancode<span class="color-default font-size-20">：</span></span></span></strong></p><p>见<a href="https://wiki.archlinux.org/index.php/Keyboard_input#Using_evtest"><span class="font-size-12">Archwiki - Keyboard input #USE evtest</span></a></p><p>切换到root身份（非sudo）运行evtest，你可以看到像下图一样的输出</p><ul class=" list-paddingleft-2"><li><p><span class="color-gray-03 font-size-12">/dev/input/event*</span>就是输入设备，右边会跟着每个输入设备的名字，像蓝色框中的<span class="color-gray-03 font-size-12">AT Translated Set 2 keyboard</span>这样的一般是笔记本电脑自带的键盘，<span class="color-gray-03 font-size-12">Ducky AKKO 3087</span>这样的一般就是USB外接键盘。</p></li><li><p>注意如果是USB键盘，同时会显示有多个输入设备。比如我的<span class="color-gray-03 font-size-12">Ducky AKKO 3087</span><span class="color-default font-size-16">就显示了多个相关设备（event8、event23～event26），它们是由于USB键盘使用了一个叫<strong>HID</strong><span class="color-default">的规范</span><span class="color-default font-size-16">而产生的。我们只关心第一个，也就是<span class="color-gray-03 font-size-12">/dev/input/event8</span>，其他的不需要理会。</span></span></p></li><li><p><span class="color-default font-size-16"><strong>HID详见</strong><a href="https://www.bilibili.com/read/cv1480188/"><span class="color-default font-size-16"><strong>cv1480188-by元圈七</strong></span></a></span></p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/4ab31627ae85f6409568a0687e329e1614a41ec7.png" width="553" height="726" data-size="83177"/><figcaption class="caption" contenteditable="">evtest输出图一</figcaption></figure><ul class=" list-paddingleft-2"><li><p>输入一个数字来选择你的键盘设备，一次只能获取一个键盘的扫描码，如果你有多个键盘需要多次运行<strong><span class="color-gray-03 font-size-12">evtest</span></strong>。这里输入了<span class="color-pink-03 font-size-12"><strong>4</strong></span>来获取笔记本内置键盘的扫描码。<strong>同理，再运行一次<span class="color-gray-03 font-size-12">evtest<span class="color-default font-size-16">并输入<span class="color-pink-03 font-size-12">8</span>来获取USB键盘上某个键的扫描码。</span></span></strong><br/></p></li><li><p>在你选择的设备和你预期的键盘设备匹配后，<strong>屏幕上的输出会直接滚动到下图的样子</strong>。<strong>如果你选错了就不会下图中红框和蓝框中这样的输出内容，请重新选择输入设备的设备号。</strong></p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/f33d07752890fe464d4ee6da2231003c1dbe2afc.png" width="563" height="838" data-size="100705"/><figcaption class="caption" contenteditable="">evtest输出图二。这里说的A键指的是键盘上标了A的物理按键</figcaption></figure><ul class=" list-paddingleft-2"><li><p>图二红框中的是键盘上的A键被按下和释放的过程。扫描码为<span class="color-gray-03 font-size-12">1e<span class="color-default font-size-16">。</span></span>红框中一共6行，第二行、第五行的<span class="color-gray-03 font-size-12">value 1</span>和<span class="color-gray-03 font-size-12">value 0<span class="color-default font-size-16">就代表键被按下和释放。蓝框中表示键盘上I键按下和释放的过程。</span></span></p></li><li><p><strong><span class="color-default font-size-16">USB键盘同理，不过扫描码应该是一个5位16进制数。</span></strong></p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/1a1d723c628267f3e9152968485cb375fcfb45ae.png" width="568" height="139" data-size="17302"/><figcaption class="caption" contenteditable="">USB键盘的扫描码</figcaption></figure><ul class=" list-paddingleft-2"><li><p><span class="color-pink-03"><strong><span class="font-size-20">按下你所要修改的几个按键，记录下它们的扫描码。明确这些扫描码所对应的物理位置。不要搞混，得到你需要的信息之后Ctrl-C结束。</span></strong></span></p></li></ul><p style="text-align: center;"><strong><span class="font-size-23"></span></strong></p><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" class="cut-off-2"/></figure><p style="text-align: center;"><strong><span class="font-size-23">2.<span class="font-size-20">确认你要修改的输入设备的设备信息</span></span></strong><br/></p><ul class=" list-paddingleft-2"><li><p><span class="font-size-16">上一步得到了几个特殊按键的scancode。现在把终端上的输出往回翻，找到你刚刚输入数字选择键盘设备的地方。<strong>（就是<span class="color-gray-03 font-size-12">evtest</span>输出图一的那个部分）</strong></span></p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/b9f26eb9bde1018f1bcce2df5cbac8f2ce4e72c2.png" width="474" height="93" data-size="15314"/><figcaption class="caption" contenteditable="">键盘输入设备的设备号和设备名</figcaption></figure><ul class=" list-paddingleft-2"><li><p><strong>记录下红框中的内容或紫色划线的内容。bus是4位16进制的总线id，对于USB键盘通常显示0x3。vendor、product、version：分别是4位的16进制供应商id，产品id和版本id。<span class="color-pink-03">所有的16进制数需要补0到4位。</span>紫色划线内容就是设备名。</strong></p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" class="cut-off-2"/></figure><p style="text-align: center;"><span class="font-size-23"><strong>3.</strong></span><span class="font-size-20"><strong>编写自定义的scancode-&gt;keycode规则</strong></span></p><ul class=" list-paddingleft-2"><li><p>scancode-&gt;keycode的规则编写在<strong>硬件数据库</strong>中，分为两部分：</p><p>硬件厂商和操作系统共同维护的<strong>硬件数据库</strong>，包括了可查看的具体数据库内容，位于<span class="color-gray-03 font-size-12">/usr/lib/udev/hwdb.d/</span>目录下，键盘部分存放在<span class="color-gray-03 font-size-12">60-keyboard.hwdb</span>中，这些都是文本文件，<span class="color-pink-03"><strong>极其不建议修改这些<span class="color-gray-03 font-size-12">hwdb</span>文件或在该目录下新建自己的规则</strong></span>。系统运行时使用编译好的二进制文件<span class="color-gray-03 font-size-12">/usr/lib/udev/hwdb.bin</span>。</p><p>本机管理员维护的<span class="font-size-16"><strong>自定义硬件数据库</strong></span>，位于<span class="color-gray-03 font-size-12">/etc/udev/hwdb.d/</span>目录，目前你这里应该还是空的。系统运行时使用编译好的二进制文件<span class="color-gray-03 font-size-12">/etc/udev/hwdb.bin</span>。</p><p><br/></p></li><li><p><strong><span class="color-pink-03 font-size-20">重要内容！！！</span></strong></p><p><span class="color-gray-03 font-size-12"><strong>/usr/lib/udev/hwdb.d/</strong></span><strong>目录下规则为默认规则，<span class="color-gray-03 font-size-12">/etc/udev/hwdb.d/</span>目录下对设备定义的规则如果和默认规则有冲突，会覆盖默认规则。</strong></p><p><strong>系统数据库中的文件和自定义硬件数据库中的文件，命名都应该以数字开头，数字大小代表加载顺序，小的先加载，大的后加载。如果不同文件中对同一个设备的规则做了定义，后加载的（数字大的文件定义）会覆盖先加载的（数字小的文件定义）。</strong></p><p><br/></p></li><li><p>在<span class="color-gray-03 font-size-12">/etc/udev/hwdb.d/</span>下<span class="font-size-20"><strong>以root身份</strong></span>新建一个文本文件<span class="color-gray-03 font-size-12">99-personal-kbd.hwdb</span>。</p><p>具体文件名需要遵守“&lt;num&gt;-&lt;word&gt;.hwdb”规则，即<strong><span class="font-size-16">“数字-单词.hwdb”</span></strong>，如果这里本来就是空的，写成<span class="color-gray-03 font-size-12">01-personal-kbd.hwdb</span>或许也没什么问题。</p><p><br/></p></li><li><h1>文件格式：</h1><p>“#”为注释，其他如图所示</p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/a811ef3da95291779b84eaedb90a6821adf27c01.png" width="524" height="258" data-size="56171"/><figcaption class="caption" contenteditable="">99-personal-kbd.hwdb</figcaption></figure><p>本图表示在我的机器上交换<span class="color-blue-02">Esc</span>和<span class="color-blue-02">Capslock</span>、<span class="color-blue-02">LeftAlt</span>和<span class="color-blue-02">LeftCtrl<span class="color-default">，并对所有的USB键盘和内置键盘生效。</span></span></p><p><span class="color-default"><strong>经过测试，使用USB接收器的2.4Ghz无线键盘也是可以完美运行的<span class="color-default font-size-12">（毕竟接收器是接在USB总线上的）</span>。我手边没有蓝牙键盘，不清楚可行与否<span class="color-default font-size-12">（理论上也是可以的，因为蓝牙也是接在USB总线上的）</span>。欢迎在评论区报告问题。</strong></span></p><h1></h1><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/0117cbba35e51b0bce5f8c2f6a838e8a087e8ee7.png" class="cut-off-1"/></figure><ul class=" list-paddingleft-2"><li><p><strong><span class="font-size-23">多把USB键盘，每一把都需要有不同设置的用户：</span></strong></p></li><li><p><strong>精确匹配USB键盘</strong>：<br/></p><p><strong><span class="color-gray-03 font-size-12">evdev:input:b<span class="color-pink-03 font-size-12">&lt;bus_id&gt;</span>v<span class="color-pink-03 font-size-12">&lt;vendor_id&gt;</span>p<span class="color-pink-03 font-size-12">&lt;product_id&gt;</span>v<span class="color-pink-03 font-size-12">&lt;version_id&gt;<span class="color-gray-03 font-size-12">        (根据id精确匹配)</span></span></span></strong></p><p><span class="color-default font-size-16"><strong><span class="color-gray-03 font-size-12">evdev:name:<span class="color-pink-03 font-size-12">&lt;input_device_name&gt;</span>:dmi:bvn*:bvr*:bd*:svn<span class="color-pink-03 font-size-12">&lt;vendor&gt;</span>:pn*   (根据设备名匹配)</span></strong></span></p><p><span class="color-default font-size-16">其中的<span class="font-size-12"><strong>&lt;</strong><strong>bus_id&gt;</strong></span><strong>、<span class="font-size-12">&lt;vendor_id&gt;</span>、<span class="font-size-12">&lt;product_id&gt;</span>、<span class="font-size-12">&lt;vension_id&gt;</span></strong>需要替换成刚刚记录的设备信息。<strong><span class="color-default font-size-12">&lt;vendor&gt;</span></strong><span class="color-default font-size-16">需要另一个软件包<strong><span class="color-gray-03 font-size-12">evemu</span></strong>提供的工具<span class="color-gray-03 font-size-12">evemu-describe</span><span class="color-default">得到。</span></span>注意<span class="color-default font-size-20"><strong>不够4位的数需要补“0”到4位，16进制数的a～f需要小写</strong></span>，例如：</span><span class="color-gray-03 font-size-12">evdev:input:b0003v0C45p7638*</span></p><p><span class="color-default font-size-16">这是我的Ducky AKKO 3087 USB键盘，最后面使用*通配就可以了，加不加version_id都可以，只要能匹配到目标设备就可以了。</span><strong class="color-default font-size-12">&lt;</strong><strong class="color-default font-size-12">input_device_name&gt;</strong><span class="color-default font-size-16">需要替换成设备名。</span></p></li><li><p><strong><span class="color-default">精确匹配笔记本电脑内置的AT键盘</span></strong><span class="color-default">：</span></p><p><strong><span class="color-gray-03 font-size-12">evdev:atkbd:dmi:bvn*:bvr*:bd*:svn<span class="color-pink-03 font-size-12">&lt;vendor&gt;</span>:pn<span class="color-pink-03 font-size-12">&lt;product&gt;</span>:pvr*</span></strong><span class="color-gray-03 font-size-12">   （根据id精确匹配）</span></p><p>同样需要使用evemu-describe工具得到<span class="font-size-12"><strong>&lt;vendor&gt;</strong></span>和<strong><span class="font-size-12">&lt;product&gt;</span></strong>。</p><p><br/></p></li><li><h1>一般用户：</h1></li><li><p><strong>匹配USB键盘：</strong><br/></p><p><strong><span class="color-gray-03 font-size-12">evdev:input:b0003*   （匹配所有USB总线上的input类型的设备）</span></strong></p><p>虽然这种方法不止可以匹配到键盘，但是事实上其他设备也不会产生和键盘一样的扫描码输入<span class="color-gray-03 font-size-12">KEYBOARD_KEY_&lt;scancode&gt;</span>，所以一点问题也没有。</p></li><li><p><strong>匹配笔记本电脑内置键盘：</strong></p><p><strong><span class="color-gray-03 font-size-12">evdev:atkdb:dim*     （匹配所有dmi总线上的at键盘）</span></strong></p><p>一般情况笔记本电脑也只有一把内置键盘，所以更不可能出问题。</p></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/0117cbba35e51b0bce5f8c2f6a838e8a087e8ee7.png" class="cut-off-1"/></figure><p><br/></p><ul class=" list-paddingleft-2"><li><h1>自定义scancode-&gt;keycode mapping</h1></li><li><p><strong>KEYCODE_KEY_<span class="color-pink-03">&lt;scancode&gt;</span>=<span class="color-pink-03">&lt;keycode&gt;</span></strong></p><p><span class="color-default font-size-16">&lt;scancode&gt;就是最开始记录下来的那个目标物理按键的扫描码。&lt;keycode&gt;是键码，需要小写。可用的键码值见该表<a href="https://hal.freedesktop.org/quirk/quirk-keymap-list.txt"><span class="color-default font-size-12">Keymap-list</span></a></span></p></li><li><h1>保存退出</h1></li><li><h1>更新数据库内容</h1><p>就是把自定义的内容编译到<span class="font-size-12">hwdb.bin</span>中，让自定义内容开始生效。</p><p><strong>以root身份运行：</strong></p><p><span class="color-gray-03"><span class="font-size-20"><strong>#</strong></span> udevadm hwdb --update</span></p><p><span class="color-gray-03"><span class="color-gray-03 font-size-20"><strong>#</strong></span> udevadm trigger</span></p><p>第一条命令是重新编译二进制的数据库内容，第二条命令表示立刻重新触发所有输入设备，让更改立刻生效。</p><p><span class="font-size-20"><strong>注意：</strong><span class="font-size-16">这只能添加或修改数据库内容，如果你删除了某个规则，直到你重启原来的内容都会留在内核当中，不会失效。</span></span></p></li><li><h1><span class="color-pink-03">如果你的操作没有问题，没有字符输入错误，那现在你的预期目标应该已经达成了。</span></h1></li></ul><figure class="img-box" contenteditable="false"><img data-src="//i0.hdslb.com/bfs/article/02db465212d3c374a43c60fa2625cc1caeaab796.png" class="cut-off-6"/></figure><p style="text-align: center;"><span class="color-pink-04 font-size-23"><strong><span class="font-size-23">总结以及一些技巧</span></strong></span></p><p>之前在群里教另一个小伙伴用修改hwdb的方法修改键映射。他需要使用Colemak键盘映射。但是并没有使用上一章结尾所说的方法去更改键盘的功能布局。而是直接在hwdb中硬编码了Colemak的<span class="color-gray-03 font-size-12">scancode-&gt;keycode mapping</span>，</p><p>他的操作给我提供了一个思路：如果你想使用Dvorak或Colemak映射。但是其他习惯于使用QWERTY映射的人需要在你的电脑上进行操作。由于协作问题的顾虑，你不能够随意更改自己的使用习惯。</p><p>那这个时候，实际上你可以在hwdb数据库中对自己私人使用的键盘进行硬编码。其他的键盘就用默认的mapping，当别人需要使用你的电脑，让TA带着TA自己的键盘来（狗头）</p><p>或者找某宝，最便宜的键盘20块，二手的可能更便宜。自己的键盘使用自己的映射，只用对这一个键盘硬编码成常规的QWERTY映射，反正是给别人用的，而且也是只用那么一会，不需要多好的键盘（狗头）</p><p>总之在Linux上，可自定义的地方太多了。多找文档，多搜索，总能有解决办法。当有一天你发现没有地方可以找了，只能自己写程序解决，那么你就已经是大神了。</p><p><br/></p><p><span class="color-default font-size-16">参考内容：</span></p><p><span class="color-default font-size-16"><span class="color-default font-size-12"><a href="https://wiki.archlinux.org/index.php/Keyboard_input">Archwiki - Keyboard input</a></span></span></p><p><span class="color-default font-size-16"><a href="https://wiki.archlinux.org/index.php/Map_scancodes_to_keycodes"><span class="color-default font-size-12">Archwiki - Map scancodes to keycodes</span></a></span></p><p><br/></p></div>
+    
+    <p class="original">本文为我原创</p>
+    
+    
+     
+    <ul class="tag-container">
+        
+        <li data-tag-id="2528598" class="tag-item">
+          <span class="tag-border">
+            <span class="tag-border-inner"></span>
+          </span>
+          <span class="tag-content">Linux</span>
+        </li>
+        
+        <li data-tag-id="2563424" class="tag-item">
+          <span class="tag-border">
+            <span class="tag-border-inner"></span>
+          </span>
+          <span class="tag-content">Emacs</span>
+        </li>
+        
+        <li data-tag-id="2563425" class="tag-item">
+          <span class="tag-border">
+            <span class="tag-border-inner"></span>
+          </span>
+          <span class="tag-content">Vim</span>
+        </li>
+        
+    </ul>
+    
+    <div class="article-action">
+      <div class="ops">
+        <span class="like-btn">
+          <i class="icon-video-details_like"></i>
+          <span>--</span>
+        </span>
+        <span class="coin-btn">
+          <i class="icon-video-details_throw-coin"></i>
+          <span>--</span>
+        </span>
+        <span class="fav-btn">
+          <i class="icon-video-details_collection"></i>
+          <span>--</span>
+        </span>
+        <span class="share-container share-btn">
+          分享到：<span></span>
+        </span>
+      </div>
+      <div class="more">
+        <!-- <i class="icon-general_more-actions"></i> -->
+        <div class="more-ops-list">
+          <ul>
+            <li value="0">投诉或建议</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="article-list-holder-block"></div>
+    <div class="draft-holder-block">
+    </div>
+    <div class="b-head comment-title-block">
+      <span class="b-head-t comment-results" style="display: inline;"></span>
+      <span class="b-head-t">评论</span>
+    </div>
+    <div class="comment-holder"></div>
+
+</div>
+<div id="biliMainFooter" class="report-wrap-module"></div>
+<script src="//static.hdslb.com/public/intersection-observer.js"></script>
+<script src="//static.hdslb.com/js/jquery-3.3.1.min.js"></script>
+<script>
+  window.reportMsgObj = {}
+  window.reportConfig = {
+    sample : 1,
+    errorTracker : false ,
+    resourceTracker: false ,
+    scrollTracker: false,
+    msgObjects : 'reportMsgObj'
+  }
+</script>
+<script type="text/javascript" charset="utf-8" src="//s1.hdslb.com/bfs/seed/jinkela/header-v2/header.js"></script>
+<script type="text/javascript" src="//s1.hdslb.com/bfs/seed/jinkela/footer-v2/footer.js"></script>
+<script src="//s1.hdslb.com/bfs/seed/jinkela/short/config/biliconfig.js"></script>
+<script type="text/javascript" src="//s1.hdslb.com/bfs/seed/jinkela/commentpc/comment.min.js"></script>
+<script src="//s1.hdslb.com/bfs/static/biliapp/biliapp.js"></script>
+<script>
+  window.addEventListener('beforeunload', function(){
+    window.reportMsgObj['pageunload'] = document.hidden
+  })
+</script>
+<script type="text/javascript" src="//s1.hdslb.com/bfs/static/jinkela/article/manifest.3d54106910911b51bbab7b0efce88160c117d2ef.js"></script><script type="text/javascript" src="//s1.hdslb.com/bfs/static/jinkela/article/vendor.3d54106910911b51bbab7b0efce88160c117d2ef.js"></script><script type="text/javascript" src="//s1.hdslb.com/bfs/static/jinkela/article/pcDetail.3d54106910911b51bbab7b0efce88160c117d2ef.js"></script></body>
+</html>

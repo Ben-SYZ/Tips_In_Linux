@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html id="XenForo" dir="LTR" class="Public LoggedOut NoSidebar  Responsive hasJs NoTouch HasDragDrop" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style type="text/css" id="dark-mode-custom-style" lang="en"></style><style type="text/css" id="dark-mode-native-style" lang="en"></style><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+		<!-- base href="https://www.udoo.org/forum/" -->
+		<script src="GPIO%20permissions%20for%20libgpiod_files/sdk_002.js" async="" crossorigin="anonymous"></script><script src="GPIO%20permissions%20for%20libgpiod_files/cbgapi.loaded_1" async=""></script><script src="GPIO%20permissions%20for%20libgpiod_files/cbgapi.loaded_0" async=""></script><script async="" src="GPIO%20permissions%20for%20libgpiod_files/analytics.js"></script><script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://www.udoo.org/forum/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+	
+
+	<title>GPIO permissions for libgpiod sudo or not | UDOO Forum</title>
+	
+	
+	<link rel="stylesheet" href="GPIO%20permissions%20for%20libgpiod_files/css_002.css">
+	<link rel="stylesheet" href="GPIO%20permissions%20for%20libgpiod_files/css.css">
+	
+	
+		<link rel="stylesheet" href="GPIO%20permissions%20for%20libgpiod_files/font-awesome.css">
+	
+	
+		<link href="GPIO%20permissions%20for%20libgpiod_files/css_004.css" rel="stylesheet" type="text/css">
+	
+
+	
+
+	<script>
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-40057783-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+		<script src="GPIO%20permissions%20for%20libgpiod_files/jquery-1.js"></script>	
+		
+	<script src="GPIO%20permissions%20for%20libgpiod_files/xenforo.js"></script>
+
+	
+	<link rel="apple-touch-icon" href="https://www.udoo.org/images/mano.png">
+	<link rel="alternate" type="application/rss+xml" title="RSS feed for UDOO Forum" href="https://www.udoo.org/forum/forums/-/index.rss">
+	
+	
+	<link rel="canonical" href="http://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/">
+	<meta name="description" content="In a previous post https://www.udoo.org/forum/threads/using-braswell-gpio-i2c-and-uart-pins.32423/ I discussed the use of the libgpiod library, which...">	<meta property="og:site_name" content="UDOO Forum">
+	<meta property="og:image" content="https://www.udoo.org/forum/data/avatars/m/76/76793.jpg?1598674904">
+	<meta property="og:image" content="https://www.udoo.org/images/mano.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/">
+	<meta property="og:title" content="GPIO permissions for libgpiod sudo or not">
+	<meta property="og:description" content="In a previous post https://www.udoo.org/forum/threads/using-braswell-gpio-i2c-and-uart-pins.32423/ I discussed the use of the libgpiod library, which...">
+	
+	
+	
+
+<link rel="icon" href="https://www.udoo.org/forum/favicon.ico" type="image/x-icon">
+<script async="" src="GPIO%20permissions%20for%20libgpiod_files/clientplusone.js" gapi_processed="true"></script><script src="GPIO%20permissions%20for%20libgpiod_files/sdk.js" async=""></script><script async="" src="GPIO%20permissions%20for%20libgpiod_files/widgets.js"></script><script charset="utf-8" src="GPIO%20permissions%20for%20libgpiod_files/button.js"></script><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body class="node43 node38 SelectQuotable">
+
+
+
+	
+
+<div id="loginBar">
+	<div class="pageWidth">
+		<div class="pageContent">	
+			<h3 id="loginBarHandle">
+				<label for="LoginControl"><a href="https://www.udoo.org/forum/login/" class="concealed noOutline">Log in or Sign up</a></label>
+			</h3>
+			
+			<span class="helper"></span>
+
+			
+		<form action="login/login" method="post" class="xenForm " id="login" style="display:none">
+
+	
+
+	<div class="ctrlWrapper">
+		<dl class="ctrlUnit">
+			<dt><label for="LoginControl">Your name or email address:</label></dt>
+			<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"></dd>
+		</dl>
+	
+	
+		<dl class="ctrlUnit">
+			<dt>
+				<label for="ctrl_password">Do you already have an account?</label>
+			</dt>
+			<dd>
+				<ul>
+					<li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105">
+						No, create an account now.</label></li>
+					<li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler">
+						Yes, my password is:</label></li>
+					<li id="ctrl_registered_Disabler">
+						<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102">
+						<div class="lostPassword"><a href="https://www.udoo.org/forum/lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+	
+		
+		<dl class="ctrlUnit submitUnit">
+			<dt></dt>
+			<dd>
+				<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginphrase="Log in" data-signupphrase="Sign up">
+				<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103"> Stay logged in</label>
+			</dd>
+		</dl>
+	</div>
+
+	<input type="hidden" name="cookie_check" value="1">
+	<input type="hidden" name="redirect" value="/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/">
+	<input type="hidden" name="_xfToken" value="">
+
+</form></div>
+	</div>
+</div>
+
+<div class="topHelper"></div>
+<div id="headerMover">
+	<div id="headerProxy"></div>
+
+<div id="content" class="thread_view">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<!-- main content area -->
+			
+			
+			
+			
+						
+						
+						
+						
+						<div class="breadBoxTop ">
+							
+							
+
+<nav>
+	
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+	<fieldset class="breadcrumb" style="">
+		<a href="https://www.udoo.org/forum/misc/quick-navigation-menu?selected=node-43" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><i class="fa fa-sitemap"></i></a>
+			
+		<div class="boardTitle"><strong>UDOO Forum</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="http://www.udoo.org/forum/" class="crumb" rel="up" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i></span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://www.udoo.org/forum/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://www.udoo.org/forum/#boards.38" class="crumb" rel="up" itemprop="url"><span itemprop="title">Boards</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://www.udoo.org/forum/forums/udoo-x86.43/" class="crumb" rel="up" itemprop="url"><span itemprop="title">UDOO X86</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav>
+						</div>
+						
+						
+						
+					
+						<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+
+						
+						
+
+						
+						
+						
+						
+												
+							<!-- h1 title, description -->
+							<div class="titleBar">
+								
+								<h1>GPIO permissions for libgpiod sudo or not</h1>
+								
+								<p id="pageDescription" class="muted ">
+	Discussion in '<a href="https://www.udoo.org/forum/forums/udoo-x86.43/">UDOO X86</a>' started by <a href="https://www.udoo.org/forum/members/quack.76793/" class="username" dir="auto">Quack</a>, <a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/"><span class="DateTime" title="Aug 23, 2020 at 7:42 AM">Aug 23, 2020</span></a>.
+</p>
+							</div>
+						
+						
+						
+						
+						
+						<!-- main template -->
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="tagBlock TagContainer">
+	Tags:
+	
+		<ul class="tagList">
+		
+			<li><a href="https://www.udoo.org/forum/tags/braswell-gpio/" class="tag"><span class="arrow"></span>braswell gpio</a></li>
+		
+			<li><a href="https://www.udoo.org/forum/tags/gpio/" class="tag"><span class="arrow"></span>gpio</a></li>
+		
+			<li><a href="https://www.udoo.org/forum/tags/libgpiod/" class="tag"><span class="arrow"></span>libgpiod</a></li>
+		
+			<li><a href="https://www.udoo.org/forum/tags/permission/" class="tag"><span class="arrow"></span>permission</a></li>
+		
+			<li><a href="https://www.udoo.org/forum/tags/sudo/" class="tag"><span class="arrow"></span>sudo</a></li>
+		
+		</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="pageNavLinkGroup">
+	<div class="linkGroup SelectionCountContainer">
+		
+		
+	</div>
+
+	
+</div>
+
+
+
+
+
+<form action="inline-mod/post/switch" method="post" class="InlineModForm section" data-cookiename="posts" data-controls="#InlineModControls" data-imodoptions="#ModerationSelect option">
+
+	<ol class="messageList" id="messageList">
+		
+			
+				
+
+
+<li id="post-60404" class="message   " data-author="Quack">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="avatar Av76793m" data-avatarhtml="true"><img src="GPIO%20permissions%20for%20libgpiod_files/76793.jpg" alt="Quack" width="96" height="96"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="username" dir="auto" itemprop="name">Quack</a>
+			<em class="userTitle" itemprop="title">UDOOer</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jun 27, 2020</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://www.udoo.org/forum/search/member?user_id=76793" class="concealed" rel="nofollow">15</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Likes Received:</dt>
+						<dd>4</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					In a previous post <a href="https://www.udoo.org/forum/threads/using-braswell-gpio-i2c-and-uart-pins.32423/" class="internalLink">https://www.udoo.org/forum/threads/using-braswell-gpio-i2c-and-uart-pins.32423/</a>
+ I discussed the use of the libgpiod library, which provides a CLI as 
+well as Python and C++ bindings to replace the depreciated sysfs system.
+  It creates 4 devices which you can see using ls /dev/gpio* as 
+/dev/gpiochip0-4.  If you examine the permissions they are root only and
+ you have to run any programs using super user privileges.  e.g. sudo 
+gpiodetect etc.<br>
+<br>
+This is for good reason!   There are actually over 200 gpio lines 
+managed by the chips which control the other chips, output and input 
+ports and switches etc.  Changing some of them inadvertently can really 
+muck things up.  For this reason I strongly suggest the following 
+practice when programming.  Assign aliases or names using define in your
+ C headers e.g. #define D24_chip = 0 D24_line = 47 or names in your 
+Python files to refer to the chip and line for a pin.  e.g. D24 = (3,47)
+ (python tuple). Use your aliases not numbers in your calls to the 
+library.<br>
+<br>
+All but 3 of the External GPIO pins are managed by gpiochip3.  To run 
+without having superuser privileges, you need to do the following: 
+Create a gpiod group, add user to it and add a file to the 
+/etc/udev/rules.d/ to assign the gpiochips to the gpiod group and give 
+rw privileges.  The following works on linux Mint 20<br>
+<br>
+sudo groupadd gpiod<br>
+sudo usermod -G gpiod &lt;user&gt;<br>
+<br>
+then create a file in the /etc/udev/rules.d named 60-gpiod.rules containing the following:<br>
+# udev rules for gpio port access through libgpiod<br>
+SUBSYSTEM=="gpio", KERNEL=="gpiochip[0-4]", GROUP="gpiod", MODE="0660"<br>
+<br>
+From command line the following should work:<br>
+sudo echo '# udev rules for gpio port access through libgpiod<br>
+SUBSYSTEM=="gpio", KERNEL=="gpiochip[0-4]", GROUP="gpiod", MODE="0660"' &gt; /etc/udev/rules.d/60-gpiod.rules<br>
+<br>
+Then reboot.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://www.udoo.org/forum/members/quack.76793/" class="username author" dir="auto">Quack</a>,</span>
+					<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 23, 2020 at 7:42 AM">Aug 23, 2020</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/60404/permalink">#1</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-60404">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="https://www.udoo.org/forum/members/maximo.42249/" class="username" dir="auto">Maximo</a> and <a href="https://www.udoo.org/forum/members/waltervl.37904/" class="username" dir="auto">waltervl</a> like this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+
+
+
+			
+		
+			
+				
+
+
+<li id="post-60637" class="message   " data-author="Quack">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="avatar Av76793m" data-avatarhtml="true"><img src="GPIO%20permissions%20for%20libgpiod_files/76793.jpg" alt="Quack" width="96" height="96"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="username" dir="auto" itemprop="name">Quack</a>
+			<em class="userTitle" itemprop="title">UDOOer</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jun 27, 2020</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://www.udoo.org/forum/search/member?user_id=76793" class="concealed" rel="nofollow">15</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Likes Received:</dt>
+						<dd>4</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					As I noted above, the permissions give you the ability to cause major havoc.  If the you look at the <span style="color: #ff0000">gpio</span> table, all but 1 of the external <span style="color: #ff0000">gpio</span> pins are controlled by <span style="color: #ff0000">gpiochip</span> 3 (pin # 40 uses <span style="color: #ff0000">gpiochip</span> 1).  The  <span style="color: #ff0000">UART</span> and <span style="color: #ff0000">i2c</span>
+ pins have their permission set if you are accessing them through their 
+interfaces so you don't need access to them unless you're using <b>libgpiod</b> to write your own drivers for them.  <br>
+<br>
+For <span style="color: #ff0000">gpiochip</span> 3 (all but pin #40): Create<span style="color: #00ff00"> <span style="color: #0000ff">/etc/udev/rules.d/60-gpiod.rules</span></span><br>
+with:<br>
+<br>
+<span style="color: #336600"># udev rules for gpio port access through libgpiod<br>
+SUBSYSTEM=="gpio", KERNEL=="gpiochip3", GROUP="gpiod", MODE="0660"</span><br>
+<br>
+if you want to use pin # 40 change it to :<br>
+<br>
+<span style="color: #006600"># udev rules for gpio port access through libgpiod<br>
+SUBSYSTEM=="gpio", KERNEL=="gpiochip[13]", GROUP="gpiod", MODE="0660"</span><br>
+<br>
+Verify you have permission by <b>ll /dev/gpio*</b><i>.</i><br>
+<br>
+This breaks the CLI permissions for the <b>libgiod</b> utilities, <b>gpiodetect</b>, <b>gpioset</b> etc.  You will need to use <b>sudo</b> for them, but you can run you progams without needing <b>sudo</b>.<br>
+<br>
+I've included an updated table.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+
+<div class="attachedFiles">
+	<h4 class="attachedFilesHeader">Attached Files:</h4>
+	<ul class="attachmentList SquareThumbs" data-thumb-height="50" data-thumb-selector="div.thumbnail &gt; a">
+		
+			<li class="attachment" title="Braswell_pinouts.pdf">
+				<div class="boxModelFixer primaryContent">
+					
+					<div class="thumbnail">
+						
+							<a href="https://www.udoo.org/forum/attachments/braswell_pinouts-pdf.2045/" target="_blank" class="genericAttachment SquareThumb"></a>
+						
+					</div>
+					
+					<div class="attachmentInfo pairsJustified">
+						<h6 class="filename"><a href="https://www.udoo.org/forum/attachments/braswell_pinouts-pdf.2045/" target="_blank">Braswell_pinouts.pdf</a></h6>
+						<dl><dt>File size:</dt> <dd>40 KB</dd></dl>
+						<dl><dt>Views:</dt> <dd>2</dd></dl>
+					</div>
+				</div>
+			</li>
+		
+	</ul>
+</div>
+
+
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://www.udoo.org/forum/members/quack.76793/" class="username author" dir="auto">Quack</a>,</span>
+					<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-60637" title="Permalink" class="datePermalink"><span class="DateTime" title="Sep 28, 2020 at 10:11 PM">Sep 28, 2020</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-60637" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/60637/permalink">#2</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-60637"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+
+			
+		
+			
+				
+
+
+<li id="post-60702" class="message   " data-author="Quack">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="avatar Av76793m" data-avatarhtml="true"><img src="GPIO%20permissions%20for%20libgpiod_files/76793.jpg" alt="Quack" width="96" height="96"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="username" dir="auto" itemprop="name">Quack</a>
+			<em class="userTitle" itemprop="title">UDOOer</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jun 27, 2020</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://www.udoo.org/forum/search/member?user_id=76793" class="concealed" rel="nofollow">15</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Likes Received:</dt>
+						<dd>4</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Oops!  I mis-wrote my addendum.   <i>There are 3 external gpio lines <span style="text-decoration: underline">not </span>controlled by gpiochip 3. Pins 36 and 37 are on gpiochip 0, pin 40  on gpiochip 1.  If you want to use them use<br>
+ "SUBSYSTEM=="gpio", KERNEL=="gpiochip[013]", GROUP="gpiod", MODE="0660"<br>
+In your udev file.  This prevents you from interfering with chips 2 and 4.</i>
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://www.udoo.org/forum/members/quack.76793/" class="username author" dir="auto">Quack</a>,</span>
+					<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-60702" title="Permalink" class="datePermalink"><span class="DateTime" title="Oct 7, 2020 at 2:30 AM">Oct 7, 2020</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-60702" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/60702/permalink">#3</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-60702"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+
+			
+		
+			
+				
+
+
+<li id="post-61343" class="message   " data-author="Quack">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="avatar Av76793m" data-avatarhtml="true"><img src="GPIO%20permissions%20for%20libgpiod_files/76793.jpg" alt="Quack" width="96" height="96"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://www.udoo.org/forum/members/quack.76793/" class="username" dir="auto" itemprop="name">Quack</a>
+			<em class="userTitle" itemprop="title">UDOOer</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jun 27, 2020</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://www.udoo.org/forum/search/member?user_id=76793" class="concealed" rel="nofollow">15</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Likes Received:</dt>
+						<dd>4</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Updated pinout table for gpio,I2c and Uarts
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+
+<div class="attachedFiles">
+	<h4 class="attachedFilesHeader">Attached Files:</h4>
+	<ul class="attachmentList SquareThumbs" data-thumb-height="50" data-thumb-selector="div.thumbnail &gt; a">
+		
+			<li class="attachment" title="Braswell_pinouts.pdf">
+				<div class="boxModelFixer primaryContent">
+					
+					<div class="thumbnail">
+						
+							<a href="https://www.udoo.org/forum/attachments/braswell_pinouts-pdf.2060/" target="_blank" class="genericAttachment SquareThumb"></a>
+						
+					</div>
+					
+					<div class="attachmentInfo pairsJustified">
+						<h6 class="filename"><a href="https://www.udoo.org/forum/attachments/braswell_pinouts-pdf.2060/" target="_blank">Braswell_pinouts.pdf</a></h6>
+						<dl><dt>File size:</dt> <dd>40 KB</dd></dl>
+						<dl><dt>Views:</dt> <dd>3</dd></dl>
+					</div>
+				</div>
+			</li>
+		
+	</ul>
+</div>
+
+
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://www.udoo.org/forum/members/quack.76793/" class="username author" dir="auto">Quack</a>,</span>
+					<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-61343" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 23, 2021 at 8:59 PM">Jan 23, 2021</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/#post-61343" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/61343/permalink">#4</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-61343"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+
+			
+		
+		
+	</ol>
+
+	
+
+	<input type="hidden" name="_xfToken" value="">
+
+</form>
+
+	<div class="pageNavLinkGroup">
+			
+				
+					<div class="linkGroup">
+						
+							<label for="LoginControl"><a href="https://www.udoo.org/forum/login/" class="concealed element">(You must log in or sign up to reply here.)</a></label>
+						
+					</div>
+				
+			
+			<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip">Show Ignored Content</a></div>
+
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+	<div class="sharePage">
+		<h3 class="textHeading larger">Share This Page</h3>
+		
+			
+			
+				<div class="tweet shareControl">
+					<iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="GPIO%20permissions%20for%20libgpiod_files/tweet_button.html" data-url="http://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/" frameborder="0"></iframe>
+				</div>
+			
+			
+				<div class="plusone shareControl">
+					<div style="position: absolute; width: 450px; left: -10000px;" id="___plusone_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" id="I0_1618400902152" name="I0_1618400902152" src="GPIO%20permissions%20for%20libgpiod_files/fastbutton.html" data-gapiattached="true" width="100%" frameborder="0"></iframe></div><div class="g-plusone" data-size="medium" data-count="true" data-href="http://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/" data-gapiscan="true" data-onload="true" data-gapistub="true"></div>
+				</div>
+			
+			
+				<div class="facebookLike shareControl">
+					
+					<div class="fb-like fb_iframe_widget" data-href="http://www.udoo.org/forum/threads/gpio-permissions-for-libgpiod-sudo-or-not.32453/" data-width="400" data-layout="standard" data-action="recommend" data-show-faces="true" data-colorscheme="light" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=recommend&amp;app_id=&amp;color_scheme=light&amp;container_width=0&amp;href=http%3A%2F%2Fwww.udoo.org%2Fforum%2Fthreads%2Fgpio-permissions-for-libgpiod-sudo-or-not.32453%2F&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;width=400"><span style="vertical-align: bottom; width: 400px; height: 20px;"><iframe name="f30941d4fe1feec" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 400px; height: 20px;" src="GPIO%20permissions%20for%20libgpiod_files/like.html" class="" width="400px" height="1000px" frameborder="0"></iframe></span></div>
+				</div>
+			
+			
+		
+	</div>
+
+						
+						
+						
+						
+							<!-- login form, to be moved to the upper drop-down -->
+							
+
+
+
+
+
+
+
+
+						
+						
+					
+			
+						
+			<div class="breadBoxBottom">
+
+<nav>
+	
+
+	<fieldset class="breadcrumb" style="">
+		<a href="https://www.udoo.org/forum/misc/quick-navigation-menu?selected=node-43" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><i class="fa fa-sitemap"></i></a>
+			
+		<div class="boardTitle"><strong>UDOO Forum</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust homeCrumb">
+					<a href="http://www.udoo.org/forum/" class="crumb"><span><i class="fa fa-home"></i></span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust selectedTabCrumb">
+					<a href="https://www.udoo.org/forum/" class="crumb"><span>Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust">
+						<a href="https://www.udoo.org/forum/#boards.38" class="crumb"><span>Boards</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust">
+						<a href="https://www.udoo.org/forum/forums/udoo-x86.43/" class="crumb"><span>UDOO X86</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav></div>
+			
+						
+			
+						
+		</div>
+	</div>
+</div>
+
+<header>
+	
+
+
+<div id="header">
+	<link rel="stylesheet" id="redux-google-fonts-css" href="GPIO%20permissions%20for%20libgpiod_files/css_003.css" type="text/css" media="all">
+
+<div id="logoBlock">
+	<div class="pageWidth">
+		<div class="pageContent" style="text-align:right;">
+
+			<div id="logo" style="float:left; height: 50px; max-width: 100%; margin-top: 0px;">
+				<a href="http://udoo.org/forum/" title="UDOO">
+					<img src="GPIO%20permissions%20for%20libgpiod_files/logoogo.png" alt="">						
+				</a>
+			</div>
+	
+			<nav class="header-menu menu-style- menu-uppercase-yes submenu-">
+					<ul id="header-menu" class="menu">
+                        
+                        
+<li class="menu-item-1964 color 2ecc71 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children simple"><a href="#">UDOO PRODUCTS</a>
+<ul class="sub-menu">
+	<li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO BOLT GEAR</a><ul class="sub-menu">
+    <li class="menu-item-8320 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udooboltgear/">OVERVIEW</a></li>
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udoo-bolt-gear/">DISCOVER</a></li>
+	<li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/get-started-bolt-gear/">GET STARTED</a></li>
+	<li class="menu-item-8570 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/docs-gear/">DOCS</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/udoo-bolt-gear.html" target="_blank">BUY</a></li>
+        </ul></li>
+	
+    <li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO BOLT</a><ul class="sub-menu">
+    
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udoo-bolt/">DISCOVER</a></li>
+	<li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/get-started-bolt/">GET STARTED</a></li>
+	<li class="menu-item-8570 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/docs-bolt/">DOCS</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/products/bolt.html" target="_blank">BUY</a></li>
+        </ul></li>
+    
+    <li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO X86 II</a><ul class="sub-menu">
+    
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udoo-x86-ii/">DISCOVER</a></li>
+	<li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/get-started-x86-ii/">GET STARTED</a></li>
+	<li class="menu-item-8570 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/docs-x86/">DOCS</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/x86.html" target="_blank">BUY</a></li>
+        </ul></li>
+    
+    <li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO NEO</a><ul class="sub-menu">
+    
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udoo-neo/">DISCOVER</a></li>
+	<li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/get-started-neo/">GET STARTED</a></li>
+        <li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/resources-neo/">RESOURCES</a></li>
+	<li class="menu-item-8570 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/docs-neo/">DOCS</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/neo.html" target="_blank">BUY</a></li>
+        </ul></li>
+    
+    <li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO QUAD/DUAL</a><ul class="sub-menu">
+    
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/udoo-quad-dual/">DISCOVER</a></li>
+	<li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/get-started-quad-dual/">GET STARTED</a></li>
+        <li class="menu-item-4941 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/resources-quad-dual/">RESOURCES</a></li>
+	<li class="menu-item-8570 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/docs/">DOCS</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/quad-dual.html" target="_blank">BUY</a></li>
+        </ul></li>
+    
+    <li class="menu-item-9937 menu-item menu-item-type-post_type menu-item-object-page "><a href="#">UDOO BRICKS</a><ul class="sub-menu">
+    
+	<li class="menu-item-4942 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/check-out-udoo-bricks/">DISCOVER</a></li>
+	<li class="menu-item-8151 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://shop.udoo.org/" target="_blank">BUY</a></li>
+        </ul></li>
+   
+</ul>
+</li>
+                        
+<li class="menu-item-1989 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children simple"><a href="#">COMMUNITY</a>
+<ul class="sub-menu">
+	<li class="menu-item-1990 menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.udoo.org/blog/">BLOG</a></li>
+	<li class="menu-item-1991 menu-item menu-item-type-custom menu-item-object-custom "><a href="https://www.udoo.org/forum/">FORUM</a></li>
+</ul>
+</li>
+
+<li class="menu-item-4382 menu-item menu-item-type-custom menu-item-object-custom simple"><a href="http://udoo.hackster.io/" target="_blank">PROJECTS</a></li>
+</ul>				</nav>
+
+	
+			<div style="height:80px; float:right;">
+			<a class="btn ksbutton_shop_buy" href="https://www.udoo.org/distributors/" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> DISTRIBUTORS</a>
+			<a class="btn ksbutton_shop_buy" href="http://shop.udoo.org/" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> SHOP</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+	
+
+<div id="navigation" class="pageWidth withSearch">
+	<div class="pageContent">
+		<nav>
+
+<div class="navTabs">
+	<ul class="publicTabs">
+		<!-- extra tabs: home -->
+		
+		
+		
+		<!-- forums -->
+		
+			<li class="navTab forums selected">
+			
+				<a href="https://www.udoo.org/forum/" class="navLink">Forums</a>
+				<a href="https://www.udoo.org/forum/" class="SplitCtrl" rel="Menu"><i class="fa fa-bars"></i></a>
+				
+				<div class="tabLinks forumsTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Forums</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						
+						<li><a href="https://www.udoo.org/forum/search/?type=post">Search Forums</a></li>
+						
+						<li><a href="https://www.udoo.org/forum/find-new/posts" rel="nofollow">Recent Posts</a></li>
+					
+					</ul>
+				</div>
+			</li>
+		
+		
+		
+		<!-- extra tabs: middle -->
+		
+		
+		
+		<!-- members -->
+		
+			<li class="navTab members Popup PopupControl PopupClosed PopupContainerControl">
+			
+				<a href="https://www.udoo.org/forum/members/" class="navLink">Members</a>
+				<a href="https://www.udoo.org/forum/members/" class="SplitCtrl" rel="Menu"><i class="fa fa-bars"></i></a>
+				
+				
+			</li>
+						
+		
+		<!-- extra tabs: end -->
+		
+
+		<!-- responsive popup -->
+		<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">	
+						
+			<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+			
+			
+		</li>
+			
+		
+		<!-- no selection -->
+		
+		
+	</ul>
+	
+	
+</div>
+
+<span class="helper"></span>
+			
+		</nav>	
+	</div>
+</div>
+	
+
+<div id="searchBar" class="pageWidth">
+	
+	<span id="QuickSearchPlaceholder" title="Search"><i class="fa fa-search"></i></span>
+	<fieldset id="QuickSearch">
+		<form action="search/search" method="post" class="formPopup">
+			
+			<div class="primaryControls">
+				<!-- block: primaryControls -->
+				<input type="search" name="keywords" class="textCtrl" placeholder="Search..." title="Enter your search and hit enter" id="QuickSearchQuery">				
+				<!-- end block: primaryControls -->
+			</div>
+			
+			<div class="secondaryControls">
+				<div class="controlsWrapper">
+				
+					<!-- block: secondaryControls -->
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+							<li><label><input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"> Search titles only</label></li>
+						</ul></dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_users">Posted by Member:</label></dt>
+						<dd>
+							<input type="text" name="users" class="textCtrl AutoComplete" id="searchBar_users" autocomplete="off">
+							<p class="explain">Separate names with a comma.</p>
+						</dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_date">Newer Than:</label></dt>
+						<dd><input type="text" data-orig-type="date" name="date" class="textCtrl date" id="searchBar_date"></dd>
+					</dl>
+					
+					
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+								
+									<li><label title="Search only GPIO permissions for libgpiod sudo or not"><input type="checkbox" name="type[post][thread_id]" value="32453" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes"> Search this thread only</label></li>
+								
+									<li><label title="Search only UDOO X86"><input type="checkbox" name="nodes[]" value="43" id="search_bar_nodes" class="Disabler AutoChecker" checked="checked" data-uncheck="#search_bar_thread"> Search this forum only</label>
+	<ul id="search_bar_nodes_Disabler">
+		<li><label><input type="checkbox" name="type[post][group_discussion]" value="1" id="search_bar_group_discussion" class="AutoChecker" data-uncheck="#search_bar_thread"> Display results as threads</label></li>
+	</ul></li>
+								
+						</ul></dd>
+					</dl>
+					
+				</div>
+				<!-- end block: secondaryControls -->
+				
+				<dl class="ctrlUnit submitUnit">
+					<dt></dt>
+					<dd>
+						<input type="submit" value="Search" class="button primary Tooltip">
+						<div class="Popup" id="commonSearches">
+							<a rel="Menu" class="button NoPopupGadget Tooltip PopupControl" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+							
+						</div>
+						<a href="https://www.udoo.org/forum/search/" class="button moreOptions Tooltip">More...</a>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<input type="hidden" name="_xfToken" value="">
+		</form>		
+	</fieldset>
+	
+</div>
+</div>
+
+	
+	
+</header>
+
+</div>
+
+<footer>
+	
+
+
+<div class="footer">
+	<div class="pageWidth">
+		
+<div class="row">
+	<div class="col-md-3 column">
+		<div id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">ABOUT</h3><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4552"><a href="https://www.udoo.org/team/">TEAM</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5204"><a href="https://www.udoo.org/press-kit-and-logo/">PRESS AND LOGO</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4554"><a href="https://www.udoo.org/we-are-hiring/">WE ARE HIRING</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4554"><a href="https://www.udoo.org/press-review/">PRESS REVIEW</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4554"><a href="https://www.udoo.org/kickstarter-superstars/">KICKSTARTER SUPERSTARS</a></li>
+</ul></div></div>												</div>
+
+	<div class="col-md-3 column">
+		<div id="nav_menu-3" class="widget widget_nav_menu"><h3 class="widget-title">SUPPORT</h3><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562"><a href="https://forum.udoo.org/">FORUM</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4557"><a href="https://ticket.udoo.org/">CUSTOMER CARE</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4555"><a href="https://www.udoo.org/contact-us/">CONTACT US</a></li>
+</ul></div></div>												</div>
+
+	<div class="col-md-3 column">
+		<div id="nav_menu-4" class="widget widget_nav_menu"><h3 class="widget-title">LEGAL NOTES</h3><div class="menu-footer-3-container"><ul id="menu-footer-3" class="menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4560"><a target="_self" href="https://www.udoo.org/cookie-policy-eu/">COOKIE POLICY</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5438"><a href="https://www.udoo.org/privacy-policy/">PRIVACY</a></li>
+</ul></div></div>												</div>
+
+	<div class="col-md-3 column">
+		<div id="md_widget_social_profiles-2" class="widget widget_md_widget_social_profiles">
+			<a class="rss" href="https://www.udoo.org/feed/" title="rss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
+			<a class="facebook" href="https://www.facebook.com/udooboard" title="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a class="twitter" href="https://twitter.com/udoo_board" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a class="youtube" href="https://www.youtube.com/user/UDOOboard" title="youtube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+			<a class="linkedin" href="https://www.linkedin.com/groups/5077338" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a class="instagram" href="https://instagram.com/udoo_board/" title="instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>						
+			<a class="github" href="https://github.com/UDOOboard" title="github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+		</div>
+		<div id="text-24" class="widget widget_text"><h3 class="widget-title">Made with ❤ in Italy</h3><div class="textwidget"></div>
+		</div>
+	</div>
+</div>
+<div class="copy-text">
+	
+© 2020 SECO S.P.A. - ALL RIGHTS RESERVED VIA A. GRANDI 20, 52100 AREZZO 
+ITALY - VAT N. 00325250512 - BUSINESS REGISTRY N. 4196 AREZZO - REA N. 
+70645 - DATA PROCESSING AR007079
+</div>
+	</div>
+</div>
+
+
+<div class="bottomHelper"></div>
+</footer>
+
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1618400899,
+		today: 1618354800,
+		todayDow: 3
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(23, 23, 23)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"likes_summary":true,"attached_files":true,"share_page":true,"login_bar":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "417c0c88",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = true;
+
+
+</script>
+
+
+
+
+<!-- Flat Awesome Version: 1.5.0 -->
+
+<div style="display: none; position: absolute;" id="calroot"><div id="calhead"><a id="calprev">←</a><div id="caltitle"></div><a id="calnext">→</a></div><div id="calbody"><div id="caldays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div id="calweeks"></div></div></div><div class="Menu JsOnly tabMenu membersTabLinks" id="XenForoUniq0">
+					<div class="primaryContent menuHeader">
+						<h3>Members</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						<li><a href="https://www.udoo.org/forum/members/">Notable Members</a></li>
+						
+						<li><a href="https://www.udoo.org/forum/online/">Current Visitors</a></li>
+						<li><a href="https://www.udoo.org/forum/recent-activity/">Recent Activity</a></li>
+						<li><a href="https://www.udoo.org/forum/find-new/profile-posts" rel="nofollow">New Profile Posts</a></li>
+					
+					</ul>
+				</div><div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div><div class="Menu" id="XenForoUniq1">
+								<div class="primaryContent menuHeader">
+									<h3>Useful Searches</h3>
+								</div>
+								<ul class="secondaryContent blockLinksList">
+									<!-- block: useful_searches -->
+									<li><a href="https://www.udoo.org/forum/find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+									
+									<!-- end block: useful_searches -->
+								</ul>
+							</div><iframe scrolling="no" allowtransparency="true" src="GPIO%20permissions%20for%20libgpiod_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><iframe name="oauth2relay496411482" id="oauth2relay496411482" src="GPIO%20permissions%20for%20libgpiod_files/postmessageRelay.html" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe></body></html>

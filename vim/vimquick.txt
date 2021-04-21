@@ -1,0 +1,22 @@
+ffff ./Documents/William.c
+
+//hfsdjkads
+gf goto file
+
+ctrl i o 上次光标
+
+set spell
+edit mode :ctrl x s search
+
+:w !sudo tee %  保存无权限的文件
+
+:r read the export into text
+eg. :r !gcc
+        gcc: fatal error: no input files
+        compilation terminated.
+
+v : normal A (sss)
+        add (sss) at the end(A)
+
+:%TOhtml % current file
+

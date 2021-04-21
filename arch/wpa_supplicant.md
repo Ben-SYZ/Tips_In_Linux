@@ -13,6 +13,7 @@
 systemctl enable wpa_supplicant@wlp5s0
 ```
 ### `config systemd-network`
+等同于 `ip link set wlp5s0 up;dhcpcd wlp5s0`
 
 ```sh
 # config systemd-network
@@ -149,4 +150,7 @@ ExecStart=/usr/bin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -
 /etc/wpa_supplicant/wpa_supplicant-网卡名.conf
 ```
 
+### timeout
+[Service]
+TimeoutStartSec=15
 

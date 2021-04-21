@@ -1,0 +1,12 @@
+
+abc 说:
+27 天前
+之前，看到一篇重装 arch
+将原机 所安装的包名导出为文本，在新系统一键安装原机对应的包，请教一下怎么操作
+
+[回复]
+Avatar_small
+依云 说:
+27 天前
+pacman -Qeq > packages.txt
+pacman -Syu - < packages.txt

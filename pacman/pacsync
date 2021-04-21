@@ -1,0 +1,14 @@
+#!/bin/bash -e
+#https://blog.lilydjwg.me/2020/10/29/pacsync.215578.html
+unshare -m bash <<'EOF'
+mount --make-rprivate /
+for f in /etc/pacman.d/*.sync; do
+  filename="${f%.*}"
+  #echo $f
+  #echo $filename
+  #https://www.cnblogs.com/sparkdev/p/9045563.html
+  mount --bind "$f" "$filename"
+  #head /etc/pacman.d/mirrorlist
+done
+pacman -Sy
+EOF
