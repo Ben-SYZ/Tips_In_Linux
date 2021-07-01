@@ -1,0 +1,1 @@
+!function(){var e=document.createElement("script");e.setAttribute("src","https://www.google.com/recaptcha/api.js?render=explicit"),document.head.appendChild(e)}();

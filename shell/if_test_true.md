@@ -1,0 +1,2 @@
+bash has no Boolean data type, and so no keywords representing true and false. The if statement merely checks if the command you give it succeeds or fails. The test command takes an expression and succeeds if the expression is true; a non-empty string is an expression that evaluates as true, just as in most other programming languages. false is a command which always fails. (By analogy, true is a command that always succeeds.)
+https://stackoverflow.com/questions/19670061/bash-if-false-returns-true-instead-of-false-why

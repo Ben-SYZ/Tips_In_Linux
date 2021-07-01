@@ -15,7 +15,7 @@ wmctrl
        wmctrl  is a command that can be used to interact with an X Window manager that is compatible with the EWMH/NetWM specification.  wmctrl can query the window manager for information, and it can request that certain window management actions be taken.
 
 pkg-config
-	needed by scrcpy
+	needed by scrcpy(android scrrencopy)
 
 [ocrmypdf](https://github.com/jbarlow83/OCRmyPDF)
 	scan pdf to be search
@@ -34,7 +34,7 @@ boost
 	c lib for seshat(math formula ocr)
 xournalpp
 	handwriting pdf
-gimp
+gimp pinta
 	ps
 
 kdenlive
@@ -52,7 +52,7 @@ tlp
 filemanager
 	nautilus
 	nemo
-xtitle
+xtitle replaced by xprop
 	window title, i3 blocks
 wireless_tools
 	wireless tools
@@ -112,7 +112,7 @@ fcitx netease-cloud-music
 	qcef
 
 vimgraphic
-	vimdot
+	vimdot(graphviz)
 
 volume
 	pavucontrol
@@ -129,6 +129,11 @@ trash-bin
 	beancount
 pic
 	gif sxiv -a
+	    >>> from PIL import Image
+	    >>> img=Image.open('/home/ben/Pictures/LockScreen.png')
+	    >>> img.show()
+	python image,
+	display
 
 terminal
 	alacritty
@@ -161,3 +166,22 @@ udisk auto plugin
 clipper
 	klipper
 	plasma-workspace
+weylus
+	显示器到手机
+
+torrent
+	qbittorrent
+	ktorrent
+	transmission
+
+exiftool(perl-image-exiftool)
+	picture info GPS
+unar(unarchiver)
+	zip 乱码
+
+画化学结构
+    marvin
+pypdf2
+    A utility to read and write PDFs with Python
+debtap
+    A script to convert .deb packages to Arch Linux packages, focused on accuracy. Do not use it to convert packages that already exist on official repositories or can be built from AUR!

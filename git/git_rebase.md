@@ -15,3 +15,8 @@ git rebase --continue 继续下一个动作(到下一个 edit)
 
 这个时候查看 status,发现它是重新分支重新commit了，然后你修改这个commit
 
+
+---
+第一个分支
+
+git rebase --root -i

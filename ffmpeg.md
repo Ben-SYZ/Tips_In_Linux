@@ -1,5 +1,7 @@
-ffmpeg -f concat -safe 0 -i ./a.txt -c copy a.ts
-```
+ffmpeg -f concat -safe 0 -i ./a.txt -c copy total.ts
+
+```conf
+# a.txt
 file  'D:\delphisr\腾讯下载地址解析子串\k0028qzpkdl.321002.1.ts'
 file  'D:\delphisr\腾讯下载地址解析子串\k0028qzpkdl.321002.2.ts'
 ```
