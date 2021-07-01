@@ -13,4 +13,10 @@ if read proto cookie && [ -n "$DISPLAY" ]; then
 		echo add $DISPLAY $proto $cookie
 	fi | xauth -q -
 fi
+
+
+if [ "$SSH_CONNECTION" = "" ]; then
+    /etc/ssh/my_sshrc &
+    trap "echo " INT TERM EXIT
+fi
 ```

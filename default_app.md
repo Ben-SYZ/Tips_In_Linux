@@ -60,4 +60,8 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 
 [ref](https://unix.stackexchange.com/questions/336368/how-to-configure-nemos-right-click-open-in-terminal-to-launch-gnome-terminal)
 
+## ???
+
+/home/ben/.local/share/RecentDocuments/
+/home/ben/.local/share/Applications/ Chrome plugin
 
